@@ -59,18 +59,18 @@ export default function Academy() {
       {/* Overview */}
       <section className="py-20 bg-black border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-8 glass-card rounded-lg">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="text-center p-8 card-elevated">
               <div className="text-6xl font-bold mb-2">50+</div>
-              <div className="text-lg">Expert Instructors</div>
+              <div className="text-lg text-white/70">Expert Instructors</div>
             </div>
-            <div className="text-center p-8 glass-card rounded-lg">
+            <div className="text-center p-8 card-elevated">
               <div className="text-6xl font-bold mb-2">2,500+</div>
-              <div className="text-lg">Students Trained</div>
+              <div className="text-lg text-white/70">Students Trained</div>
             </div>
-            <div className="text-center p-8 glass-card rounded-lg">
+            <div className="text-center p-8 card-elevated">
               <div className="text-6xl font-bold mb-2">95%</div>
-              <div className="text-lg">Job Placement Rate</div>
+              <div className="text-lg text-white/70">Job Placement Rate</div>
             </div>
           </div>
         </div>
@@ -86,29 +86,29 @@ export default function Academy() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {courses.junior.map((course, index) => (
-              <div key={index} className="glass-card glass-hover overflow-hidden rounded-lg group">
-                <div className="bg-white/10 p-8 group-hover:bg-white/20 transition-all duration-300">
-                  <h3 className="text-2xl font-bold mb-4">{course.title}</h3>
-                  <div className="flex items-center gap-4 text-lg">
+              <div key={index} className="card overflow-hidden">
+                <div className="border-b border-white/10 p-8">
+                  <h3 className="text-2xl font-semibold mb-4">{course.title}</h3>
+                  <div className="flex items-center gap-4 text-lg text-white/70">
                     <span>⏱️ {course.duration}</span>
-                    <span className="glass px-3 py-1 rounded-lg">{course.level}</span>
+                    <span className="badge">{course.level}</span>
                   </div>
                 </div>
                 
                 <div className="p-8">
-                  <h4 className="font-bold mb-4 text-xl">What You'll Learn:</h4>
-                  <ul className="space-y-3">
+                  <h4 className="font-semibold mb-4 text-xl">What You'll Learn:</h4>
+                  <ul className="space-y-3 text-white/70">
                     {course.topics.map((topic, i) => (
                       <li key={i} className="flex items-start text-lg">
-                        <span className="mr-3">✓</span>
+                        <span className="mr-3 text-white">✓</span>
                         <span>{topic}</span>
                       </li>
                     ))}
                   </ul>
                   
-                  <button className="mt-8 w-full bg-white text-black py-3 font-bold hover:bg-white/90 transition-all duration-300 rounded-lg">
+                  <button className="mt-8 w-full button-primary py-3">
                     Enroll Now
                   </button>
                 </div>
@@ -128,29 +128,29 @@ export default function Academy() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {courses.enterprise.map((course, index) => (
-              <div key={index} className="glass-card glass-hover overflow-hidden rounded-lg group">
-                <div className="bg-white/10 p-8 group-hover:bg-white/20 transition-all duration-300">
-                  <h3 className="text-2xl font-bold mb-4">{course.title}</h3>
-                  <div className="flex items-center gap-4 text-lg">
+              <div key={index} className="card overflow-hidden">
+                <div className="border-b border-white/10 p-8">
+                  <h3 className="text-2xl font-semibold mb-4">{course.title}</h3>
+                  <div className="flex items-center gap-4 text-lg text-white/70">
                     <span>⏱️ {course.duration}</span>
-                    <span className="glass px-3 py-1 rounded-lg">{course.level}</span>
+                    <span className="badge">{course.level}</span>
                   </div>
                 </div>
                 
                 <div className="p-8">
-                  <h4 className="font-bold mb-4 text-xl">What You'll Learn:</h4>
-                  <ul className="space-y-3">
+                  <h4 className="font-semibold mb-4 text-xl">What You'll Learn:</h4>
+                  <ul className="space-y-3 text-white/70">
                     {course.topics.map((topic, i) => (
                       <li key={i} className="flex items-start text-lg">
-                        <span className="mr-3">✓</span>
+                        <span className="mr-3 text-white">✓</span>
                         <span>{topic}</span>
                       </li>
                     ))}
                   </ul>
                   
-                  <button className="mt-8 w-full bg-white text-black py-3 font-bold hover:bg-white/90 transition-all duration-300 rounded-lg">
+                  <button className="mt-8 w-full button-primary py-3">
                     Contact Sales
                   </button>
                 </div>
@@ -167,7 +167,7 @@ export default function Academy() {
           <p className="text-xl mb-10">
             Transform your career with cutting-edge AI and blockchain education
           </p>
-          <button className="bg-white text-black px-10 py-4 font-bold hover:bg-white/90 transition-all duration-300 text-lg rounded-lg">
+          <button className="button-primary px-10 py-4 text-lg">
             Browse All Courses
           </button>
         </div>

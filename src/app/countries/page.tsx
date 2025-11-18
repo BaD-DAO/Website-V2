@@ -75,22 +75,22 @@ export default function Countries() {
       {/* Stats Overview */}
       <section className="py-20 bg-black border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center p-8 glass-card rounded-lg">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="text-center p-8 card-elevated">
               <div className="text-6xl font-bold mb-2">15+</div>
-              <div className="text-lg">Countries</div>
+              <div className="text-lg text-white/70">Countries</div>
             </div>
-            <div className="text-center p-8 glass-card rounded-lg">
+            <div className="text-center p-8 card-elevated">
               <div className="text-6xl font-bold mb-2">3,440+</div>
-              <div className="text-lg">Community Members</div>
+              <div className="text-lg text-white/70">Community Members</div>
             </div>
-            <div className="text-center p-8 glass-card rounded-lg">
+            <div className="text-center p-8 card-elevated">
               <div className="text-6xl font-bold mb-2">261</div>
-              <div className="text-lg">Active Startups</div>
+              <div className="text-lg text-white/70">Active Startups</div>
             </div>
-            <div className="text-center p-8 glass-card rounded-lg">
+            <div className="text-center p-8 card-elevated">
               <div className="text-6xl font-bold mb-2">114</div>
-              <div className="text-lg">Events Hosted</div>
+              <div className="text-lg text-white/70">Events Hosted</div>
             </div>
           </div>
         </div>
@@ -101,32 +101,32 @@ export default function Countries() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-5xl font-bold text-white mb-16 text-center">Our Communities</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {countries.map((country) => (
-              <div key={country.name} className="glass-card glass-hover overflow-hidden rounded-lg group">
-                <div className="bg-white/10 p-8 text-center group-hover:bg-white/20 transition-all duration-300">
-                  <h3 className="text-3xl font-bold">BaD {country.name}</h3>
+              <div key={country.name} className="card overflow-hidden">
+                <div className="border-b border-white/10 p-8 text-center">
+                  <h3 className="text-3xl font-semibold">BaD {country.name}</h3>
                 </div>
                 
                 <div className="p-6">
-                  <p className="mb-6 text-sm">{country.description}</p>
+                  <p className="mb-6 text-sm text-white/70">{country.description}</p>
                   
                   <div className="space-y-3 text-sm mb-6">
-                    <div className="flex justify-between border-b border-white/20 pb-2">
-                      <span>Members:</span>
-                      <span className="font-bold">{country.members}</span>
+                    <div className="flex justify-between border-b border-white/10 pb-2">
+                      <span className="text-white/70">Members:</span>
+                      <span className="font-semibold">{country.members}</span>
                     </div>
-                    <div className="flex justify-between border-b border-white/20 pb-2">
-                      <span>Startups:</span>
-                      <span className="font-bold">{country.startups}</span>
+                    <div className="flex justify-between border-b border-white/10 pb-2">
+                      <span className="text-white/70">Startups:</span>
+                      <span className="font-semibold">{country.startups}</span>
                     </div>
-                    <div className="flex justify-between border-b border-white/20 pb-2">
-                      <span>Events:</span>
-                      <span className="font-bold">{country.events}</span>
+                    <div className="flex justify-between border-b border-white/10 pb-2">
+                      <span className="text-white/70">Events:</span>
+                      <span className="font-semibold">{country.events}</span>
                     </div>
                   </div>
                   
-                  <button className="w-full bg-white text-black py-2 font-bold hover:bg-white/90 transition-all duration-300 rounded-lg">
+                  <button className="w-full button-primary py-2">
                     Join Community
                   </button>
                 </div>
@@ -143,7 +143,7 @@ export default function Countries() {
           <p className="text-xl mb-10">
             Don't see your country listed? Help us bring BuildaDAO to your community
           </p>
-          <button className="bg-white text-black px-10 py-4 font-bold hover:bg-white/90 transition-all duration-300 text-lg rounded-lg">
+          <button className="button-primary px-10 py-4 text-lg">
             Apply to Lead a Chapter
           </button>
         </div>

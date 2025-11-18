@@ -9,7 +9,7 @@ export default function Navigation() {
 
   return (
     <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl">
-      <div className="glass-strong px-6 rounded-lg">
+      <div className="bg-black/80 backdrop-blur-sm border border-white/10 px-6 rounded-lg shadow-lg">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 text-white font-bold text-xl hover:opacity-80 transition-opacity">
@@ -45,12 +45,12 @@ export default function Navigation() {
                 <div
                   onMouseEnter={() => setOpenDropdown('resources')}
                   onMouseLeave={() => setOpenDropdown(null)}
-                  className="absolute top-full left-0 mt-3 w-48 glass-strong rounded-lg py-2"
+                  className="absolute top-full left-0 mt-2 w-48 bg-black border border-white/10 rounded-lg py-1 shadow-lg"
                 >
-                  <Link href="/events" className="block px-4 py-2.5 text-white hover:bg-white/10 text-sm transition-all duration-300 font-bold rounded">
+                  <Link href="/events" className="block px-4 py-2 text-white hover:bg-white/5 text-sm transition-colors font-medium">
                     Events
                   </Link>
-                  <Link href="/talent-pool" className="block px-4 py-2.5 text-white hover:bg-white/10 text-sm transition-all duration-300 font-bold rounded">
+                  <Link href="/talent-pool" className="block px-4 py-2 text-white hover:bg-white/5 text-sm transition-colors font-medium">
                     Talent Pool
                   </Link>
                 </div>
@@ -71,7 +71,7 @@ export default function Navigation() {
             {/* Sign In */}
             <Link 
               href="/signin" 
-              className="px-5 py-2 text-white glass hover:bg-white/10 transition-all duration-300 text-sm font-bold rounded-lg"
+              className="px-5 py-2 text-white border border-white/20 hover:bg-white/5 transition-all duration-200 text-sm font-medium rounded-md"
             >
               SIGN IN
             </Link>
@@ -79,7 +79,7 @@ export default function Navigation() {
             {/* Downloads */}
             <Link 
               href="/downloads" 
-              className="px-5 py-2 bg-white text-black hover:bg-white/90 transition-all duration-300 text-sm font-bold rounded-lg"
+              className="px-5 py-2 bg-white text-black hover:bg-white/90 transition-all duration-200 text-sm font-medium rounded-md shadow-sm"
             >
               DOWNLOADS
             </Link>
@@ -104,28 +104,28 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden border-t border-white/20 mt-2">
+          <div className="lg:hidden border-t border-white/10 mt-2">
             <div className="px-4 pt-2 pb-4 space-y-1">
-              <Link href="/first-500" className="block px-3 py-2.5 text-white hover:underline text-sm font-bold transition-all duration-300">
+              <Link href="/first-500" className="block px-3 py-2 text-white hover:bg-white/5 text-sm font-medium transition-colors rounded-md">
                 First 500
               </Link>
-              <Link href="/academy" className="block px-3 py-2.5 text-white hover:underline text-sm font-bold transition-all duration-300">
+              <Link href="/academy" className="block px-3 py-2 text-white hover:bg-white/5 text-sm font-medium transition-colors rounded-md">
                 Academy
               </Link>
-              <Link href="/countries" className="block px-3 py-2.5 text-white hover:underline text-sm font-bold transition-all duration-300">
+              <Link href="/countries" className="block px-3 py-2 text-white hover:bg-white/5 text-sm font-medium transition-colors rounded-md">
                 Countries
               </Link>
-              <Link href="/events" className="block px-3 py-2.5 text-white hover:underline text-sm font-bold transition-all duration-300">
+              <Link href="/events" className="block px-3 py-2 text-white hover:bg-white/5 text-sm font-medium transition-colors rounded-md">
                 Events
               </Link>
-              <Link href="/talent-pool" className="block px-3 py-2.5 text-white hover:underline text-sm font-bold transition-all duration-300">
+              <Link href="/talent-pool" className="block px-3 py-2 text-white hover:bg-white/5 text-sm font-medium transition-colors rounded-md">
                 Talent Pool
               </Link>
               <div className="pt-4 space-y-2">
-                <Link href="/signin" className="block px-3 py-2.5 text-center glass text-white text-sm hover:bg-white/10 transition-all duration-300 font-bold rounded-lg">
+                <Link href="/signin" className="block px-3 py-2 text-center border border-white/20 text-white text-sm hover:bg-white/5 transition-colors font-medium rounded-md">
                   SIGN IN
                 </Link>
-                <Link href="/downloads" className="block px-3 py-2.5 text-center bg-white text-black text-sm font-bold hover:bg-white/90 transition-all duration-300 rounded-lg">
+                <Link href="/downloads" className="block px-3 py-2 text-center bg-white text-black text-sm font-medium hover:bg-white/90 transition-colors rounded-md">
                   DOWNLOADS
                 </Link>
               </div>
