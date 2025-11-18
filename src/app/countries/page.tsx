@@ -69,71 +69,73 @@ export default function Countries() {
   return (
     <div className="min-h-screen bg-black pt-24">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-16">
+      <section className="bg-black text-white py-32 border-b-2 border-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl font-bold mb-4">BuildaDAO Across Africa</h1>
-          <p className="text-xl text-green-100">
-            Building vibrant tech communities in every corner of the continent
-          </p>
+          <div className="text-center space-y-8">
+            <h1 className="text-6xl md:text-8xl font-bold">BuildaDAO Across Africa</h1>
+            <p className="text-xl md:text-2xl max-w-4xl mx-auto">
+              Building vibrant tech communities in every corner of the continent
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Stats Overview */}
-      <section className="py-12 bg-gray-950">
+      <section className="py-20 bg-black border-b-2 border-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="text-center p-6 bg-gray-900 border border-gray-800 rounded-lg">
-              <div className="text-4xl font-bold text-green-400 mb-2">15+</div>
-              <div className="text-gray-400">Countries</div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="text-center p-8 bg-black border-2 border-white">
+              <div className="text-6xl font-bold mb-2">15+</div>
+              <div className="text-lg">Countries</div>
             </div>
-            <div className="text-center p-6 bg-gray-900 border border-gray-800 rounded-lg">
-              <div className="text-4xl font-bold text-blue-400 mb-2">3,440+</div>
-              <div className="text-gray-400">Community Members</div>
+            <div className="text-center p-8 bg-black border-2 border-white">
+              <div className="text-6xl font-bold mb-2">3,440+</div>
+              <div className="text-lg">Community Members</div>
             </div>
-            <div className="text-center p-6 bg-gray-900 border border-gray-800 rounded-lg">
-              <div className="text-4xl font-bold text-purple-400 mb-2">261</div>
-              <div className="text-gray-400">Active Startups</div>
+            <div className="text-center p-8 bg-black border-2 border-white">
+              <div className="text-6xl font-bold mb-2">261</div>
+              <div className="text-lg">Active Startups</div>
             </div>
-            <div className="text-center p-6 bg-gray-900 border border-gray-800 rounded-lg">
-              <div className="text-4xl font-bold text-orange-400 mb-2">114</div>
-              <div className="text-gray-400">Events Hosted</div>
+            <div className="text-center p-8 bg-black border-2 border-white">
+              <div className="text-6xl font-bold mb-2">114</div>
+              <div className="text-lg">Events Hosted</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Countries Grid */}
-      <section className="py-16 bg-black">
+      <section className="py-20 bg-black border-b-2 border-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-white mb-12 text-center">Our Communities</h2>
+          <h2 className="text-5xl font-bold text-white mb-16 text-center">Our Communities</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {countries.map((country) => (
-              <div key={country.name} className="bg-gray-900 border border-gray-800 rounded-lg overflow-hidden hover:border-green-600 transition">
-                <div className="bg-gradient-to-br from-green-600 to-blue-600 p-6 text-white text-center">
-                  <div className="text-6xl mb-3">{country.flag}</div>
+              <div key={country.name} className="bg-black border-2 border-white overflow-hidden hover:bg-white hover:text-black transition-all duration-300 group">
+                <div className="bg-white text-black p-8 text-center group-hover:bg-black group-hover:text-white transition-all duration-300">
+                  <div className="text-6xl mb-4">{country.flag}</div>
                   <h3 className="text-2xl font-bold">BaD {country.name}</h3>
                 </div>
                 
                 <div className="p-6">
-                  <p className="text-gray-400 mb-4 text-sm">{country.description}</p>
+                  <p className="mb-6 text-sm">{country.description}</p>
                   
-                  <div className="space-y-2 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-gray-500">Members:</span>
-                      <span className="font-semibold text-white">{country.members}</span>
+                  <div className="space-y-3 text-sm mb-6">
+                    <div className="flex justify-between border-b border-current pb-2">
+                      <span>Members:</span>
+                      <span className="font-bold">{country.members}</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-500">Startups:</span>
-                      <span className="font-semibold text-white">{country.startups}</span>
+                    <div className="flex justify-between border-b border-current pb-2">
+                      <span>Startups:</span>
+                      <span className="font-bold">{country.startups}</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-500">Events:</span>
-                      <span className="font-semibold text-white">{country.events}</span>
+                    <div className="flex justify-between border-b border-current pb-2">
+                      <span>Events:</span>
+                      <span className="font-bold">{country.events}</span>
                     </div>
                   </div>
                   
-                  <button className="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition text-sm">
+                  <button className="w-full bg-white text-black border-2 border-white py-2 font-bold group-hover:bg-black group-hover:text-white group-hover:border-black transition-all duration-300">
                     Join Community
                   </button>
                 </div>
@@ -143,59 +145,14 @@ export default function Countries() {
         </div>
       </section>
 
-      {/* What We Do */}
-      <section className="py-16 bg-gray-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">What Our Country Chapters Do</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-gray-900 border border-gray-800 rounded-lg hover:border-blue-600 transition">
-              <div className="bg-blue-600/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-3 text-white">Community Building</h3>
-              <p className="text-gray-400">
-                Regular meetups, workshops, and networking events to connect local innovators
-              </p>
-            </div>
-            
-            <div className="text-center p-6 bg-gray-900 border border-gray-800 rounded-lg hover:border-green-600 transition">
-              <div className="bg-green-600/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-3 text-white">Local Education</h3>
-              <p className="text-gray-400">
-                Tailored training programs addressing specific regional needs and opportunities
-              </p>
-            </div>
-            
-            <div className="text-center p-6 bg-gray-900 border border-gray-800 rounded-lg hover:border-purple-600 transition">
-              <div className="bg-purple-600/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-3 text-white">Startup Support</h3>
-              <p className="text-gray-400">
-                Mentorship and resources for local startups to grow and succeed
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Start a Chapter CTA */}
-      <section className="py-16 bg-gradient-to-r from-green-600 to-blue-600 text-white">
+      {/* CTA Section */}
+      <section className="py-20 bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-4">Start a Chapter in Your Country</h2>
-          <p className="text-xl mb-8">
+          <h2 className="text-5xl font-bold mb-6">Start a Chapter in Your Country</h2>
+          <p className="text-xl mb-10">
             Don't see your country listed? Help us bring BuildaDAO to your community
           </p>
-          <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition">
+          <button className="bg-white text-black border-2 border-white px-10 py-4 font-bold hover:bg-black hover:text-white transition-all duration-300 text-lg">
             Apply to Lead a Chapter
           </button>
         </div>

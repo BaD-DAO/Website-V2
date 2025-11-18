@@ -6,219 +6,112 @@ export default function TalentPool() {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
-    { id: 'all', name: 'All Talent', icon: '👥', count: 1250 },
-    { id: 'developers', name: 'Developers', icon: '💻', count: 450 },
-    { id: 'designers', name: 'Designers', icon: '🎨', count: 180 },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: '🔒', count: 120 },
-    { id: 'marketing', name: 'Marketing', icon: '📢', count: 200 },
-    { id: 'blockchain', name: 'Blockchain', icon: '⛓️', count: 150 },
-    { id: 'ai', name: 'AI/ML', icon: '🤖', count: 150 }
+    { id: 'all', name: 'All Talent', count: 1250 },
+    { id: 'developers', name: 'Developers', count: 450 },
+    { id: 'designers', name: 'Designers', count: 180 },
+    { id: 'cybersecurity', name: 'Cybersecurity', count: 120 },
+    { id: 'marketing', name: 'Marketing', count: 200 },
+    { id: 'blockchain', name: 'Blockchain', count: 150 },
+    { id: 'ai', name: 'AI/ML', count: 150 }
   ];
 
   const talents = [
-    {
-      id: 1,
-      name: 'Abebe Tadesse',
-      role: 'Full Stack Developer',
-      category: 'developers',
-      country: 'Ethiopia',
-      skills: ['React', 'Node.js', 'Solidity', 'Web3'],
-      experience: '5 years',
-      available: true
-    },
-    {
-      id: 2,
-      name: 'Amara Okafor',
-      role: 'UI/UX Designer',
-      category: 'designers',
-      country: 'Nigeria',
-      skills: ['Figma', 'Adobe XD', 'User Research', 'Prototyping'],
-      experience: '4 years',
-      available: true
-    },
-    {
-      id: 3,
-      name: 'Kwame Mensah',
-      role: 'Cybersecurity Expert',
-      category: 'cybersecurity',
-      country: 'Ghana',
-      skills: ['Penetration Testing', 'Security Audits', 'Blockchain Security'],
-      experience: '7 years',
-      available: false
-    }
+    { id: 1, name: 'Abebe Tadesse', role: 'Full Stack Developer', category: 'developers', country: 'Ethiopia', skills: ['React', 'Node.js', 'Solidity', 'Web3'], experience: '5 years', available: true },
+    { id: 2, name: 'Amara Okafor', role: 'UI/UX Designer', category: 'designers', country: 'Nigeria', skills: ['Figma', 'Adobe XD', 'User Research', 'Prototyping'], experience: '4 years', available: true },
+    { id: 3, name: 'Kwame Mensah', role: 'Cybersecurity Expert', category: 'cybersecurity', country: 'Ghana', skills: ['Penetration Testing', 'Security Audits', 'Blockchain Security'], experience: '7 years', available: false }
   ];
 
-  const filteredTalents = selectedCategory === 'all' 
-    ? talents 
-    : talents.filter(t => t.category === selectedCategory);
+  const filteredTalents = selectedCategory === 'all' ? talents : talents.filter(t => t.category === selectedCategory);
 
   return (
     <div className="min-h-screen bg-black pt-24">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-16">
+      <section className="bg-black text-white py-32 border-b-2 border-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl font-bold mb-4">DAO Talent Pool</h1>
-          <p className="text-xl text-green-100">
-            Connect with Africa's top tech professionals across multiple disciplines
-          </p>
+          <div className="text-center space-y-8">
+            <h1 className="text-6xl md:text-8xl font-bold">DAO Talent Pool</h1>
+            <p className="text-xl md:text-2xl max-w-4xl mx-auto">Connect with Africa's top tech professionals across multiple disciplines</p>
+          </div>
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-12 bg-gray-950">
+      <section className="py-20 bg-black border-b-2 border-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">1,250+</div>
-              <div className="text-gray-400">Professionals</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center p-8 bg-black border-2 border-white">
+              <div className="text-6xl font-bold mb-2">1,250+</div>
+              <div className="text-lg">Professionals</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">15</div>
-              <div className="text-gray-400">Countries</div>
+            <div className="text-center p-8 bg-black border-2 border-white">
+              <div className="text-6xl font-bold mb-2">15</div>
+              <div className="text-lg">Countries</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
-              <div className="text-gray-400">Skills</div>
+            <div className="text-center p-8 bg-black border-2 border-white">
+              <div className="text-6xl font-bold mb-2">50+</div>
+              <div className="text-lg">Skills</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-orange-400 mb-2">92%</div>
-              <div className="text-gray-400">Match Rate</div>
+            <div className="text-center p-8 bg-black border-2 border-white">
+              <div className="text-6xl font-bold mb-2">92%</div>
+              <div className="text-lg">Match Rate</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Categories */}
-      <section className="py-8 bg-black border-b border-gray-800">
+      <section className="py-8 bg-black border-b-2 border-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-4 justify-center">
             {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-lg font-semibold transition flex items-center gap-2 border ${
-                  selectedCategory === category.id
-                    ? 'bg-green-600 text-white border-green-600'
-                    : 'bg-gray-900 text-gray-400 hover:bg-gray-800 hover:text-white border-gray-800'
-                }`}
-              >
-                <span>{category.icon}</span>
-                <span>{category.name}</span>
-                <span className="bg-white/20 px-2 py-0.5 rounded-full text-xs">
-                  {category.count}
-                </span>
+              <button key={category.id} onClick={() => setSelectedCategory(category.id)} className={`px-6 py-3 font-bold transition-all duration-300 border-2 ${selectedCategory === category.id ? 'bg-white text-black border-white' : 'bg-black text-white border-white hover:bg-white hover:text-black'}`}>
+                {category.name} ({category.count})
               </button>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Talent Grid */}
-      <section className="py-16 bg-black">
+      <section className="py-20 bg-black border-b-2 border-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {filteredTalents.map((talent) => (
-              <div key={talent.id} className="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-green-600 transition">
-                <div className="flex items-start justify-between mb-4">
+              <div key={talent.id} className="bg-black border-2 border-white p-8 hover:bg-white hover:text-black transition-all duration-300 group">
+                <div className="flex items-start justify-between mb-6">
                   <div>
-                    <h3 className="text-xl font-bold text-white">{talent.name}</h3>
-                    <p className="text-gray-400">{talent.role}</p>
-                    <p className="text-sm text-gray-500">{talent.country}</p>
+                    <h3 className="text-2xl font-bold">{talent.name}</h3>
+                    <p className="text-lg mt-2">{talent.role}</p>
+                    <p className="text-sm mt-1">{talent.country}</p>
                   </div>
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold border ${
-                    talent.available 
-                      ? 'bg-green-600/20 text-green-400 border-green-600/30' 
-                      : 'bg-gray-800 text-gray-400 border-gray-700'
-                  }`}>
+                  <span className={`px-4 py-1 text-sm font-bold border-2 ${talent.available ? 'border-current' : 'border-current'}`}>
                     {talent.available ? 'Available' : 'Busy'}
                   </span>
                 </div>
 
-                <div className="mb-4">
-                  <p className="text-sm text-gray-400 mb-2">Experience: {talent.experience}</p>
+                <div className="mb-6">
+                  <p className="text-sm mb-3">Experience: {talent.experience}</p>
                   <div className="flex flex-wrap gap-2">
                     {talent.skills.map((skill, index) => (
-                      <span key={index} className="bg-blue-600/20 text-blue-400 px-2 py-1 rounded text-xs border border-blue-600/30">
+                      <span key={index} className="border-2 border-current px-3 py-1 text-xs font-bold">
                         {skill}
                       </span>
                     ))}
                   </div>
                 </div>
 
-                <button className="w-full bg-green-600 text-white py-2 rounded-lg font-semibold hover:bg-green-700 transition">
+                <button className="w-full bg-white text-black border-2 border-white py-3 font-bold group-hover:bg-black group-hover:text-white group-hover:border-black transition-all duration-300">
                   View Profile
                 </button>
               </div>
             ))}
           </div>
-
-          <div className="text-center mt-12">
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
-              Load More Talent
-            </button>
-          </div>
         </div>
       </section>
 
-      {/* For Talent */}
-      <section className="py-16 bg-gray-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Join Our Talent Pool</h2>
-            <p className="text-xl text-gray-400">
-              Get discovered by leading startups and organizations across Africa
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="text-center p-6 bg-gray-900 border border-gray-800 rounded-lg hover:border-green-600 transition">
-              <div className="bg-green-600/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">🎯</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-white">Get Matched</h3>
-              <p className="text-gray-400">Connect with opportunities that fit your skills</p>
-            </div>
-
-            <div className="text-center p-6 bg-gray-900 border border-gray-800 rounded-lg hover:border-blue-600 transition">
-              <div className="bg-blue-600/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">💼</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-white">Build Portfolio</h3>
-              <p className="text-gray-400">Showcase your work and achievements</p>
-            </div>
-
-            <div className="text-center p-6 bg-gray-900 border border-gray-800 rounded-lg hover:border-purple-600 transition">
-              <div className="bg-purple-600/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">🚀</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-white">Grow Career</h3>
-              <p className="text-gray-400">Access training and mentorship opportunities</p>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <button className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition">
-              Join Talent Pool
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* For Employers */}
-      <section className="py-16 bg-gradient-to-r from-green-600 to-blue-600 text-white">
+      <section className="py-20 bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-4">Hiring? Find Your Perfect Match</h2>
-          <p className="text-xl mb-8">
-            Access vetted professionals across cybersecurity, development, design, marketing, and more
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition">
-              Post a Job
-            </button>
-            <button className="bg-transparent border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition">
-              Browse Talent
-            </button>
-          </div>
+          <h2 className="text-5xl font-bold mb-6">Hiring? Find Your Perfect Match</h2>
+          <p className="text-xl mb-10">Access vetted professionals across cybersecurity, development, design, marketing, and more</p>
+          <button className="bg-white text-black border-2 border-white px-10 py-4 font-bold hover:bg-black hover:text-white transition-all duration-300 text-lg">
+            Browse Talent
+          </button>
         </div>
       </section>
     </div>

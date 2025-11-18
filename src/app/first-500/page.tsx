@@ -86,27 +86,31 @@ export default function First500() {
                   </div>
                   <div className="mt-4 md:mt-0">
                     <span className="bg-white text-black px-6 py-2 text-lg font-bold border-2 border-white">
+                      {startup.progress}% Complete
+                    </span>
                   </div>
                 </div>
                 
-                <div className="w-full bg-gray-800 rounded-full h-3">
+                <div className="w-full bg-white h-4 border-2 border-white">
                   <div 
-                    className="bg-gradient-to-r from-blue-600 to-purple-600 h-3 rounded-full transition-all"
+                    className="bg-black h-full transition-all"
                     style={{ width: `${startup.progress}%` }}
                   ></div>
                 </div>
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          {/* Application CTA */}
-          <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-lg text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Join?</h2>
-            <p className="text-xl mb-6">Applications are open for the next cohort</p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition">
-              Apply Now
-            </button>
-          </div>
+      {/* Application CTA */}
+      <section className="py-20 bg-black">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-5xl font-bold mb-6">Ready to Join?</h2>
+          <p className="text-xl mb-10">Applications are open for the next cohort</p>
+          <button className="bg-white text-black border-2 border-white px-10 py-4 font-bold hover:bg-black hover:text-white transition-all duration-300 text-lg">
+            Apply Now
+          </button>
         </div>
       </section>
     </div>
