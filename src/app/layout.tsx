@@ -15,6 +15,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "BuildaDAO - Building the Future of Decentralized Innovation",
   description: "BuildaDAO empowers startups and talent across Africa through blockchain education, DAO infrastructure, and community-driven innovation.",
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
 };
 
 import Navigation from "@/components/Navigation";
