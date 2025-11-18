@@ -67,7 +67,7 @@ export default function Countries() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-black pt-24">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,57 +79,57 @@ export default function Countries() {
       </section>
 
       {/* Stats Overview */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="text-center p-6 bg-green-50 rounded-lg">
-              <div className="text-4xl font-bold text-green-600 mb-2">15+</div>
-              <div className="text-gray-600">Countries</div>
+            <div className="text-center p-6 bg-gray-900 border border-gray-800 rounded-lg">
+              <div className="text-4xl font-bold text-green-400 mb-2">15+</div>
+              <div className="text-gray-400">Countries</div>
             </div>
-            <div className="text-center p-6 bg-blue-50 rounded-lg">
-              <div className="text-4xl font-bold text-blue-600 mb-2">3,440+</div>
-              <div className="text-gray-600">Community Members</div>
+            <div className="text-center p-6 bg-gray-900 border border-gray-800 rounded-lg">
+              <div className="text-4xl font-bold text-blue-400 mb-2">3,440+</div>
+              <div className="text-gray-400">Community Members</div>
             </div>
-            <div className="text-center p-6 bg-purple-50 rounded-lg">
-              <div className="text-4xl font-bold text-purple-600 mb-2">261</div>
-              <div className="text-gray-600">Active Startups</div>
+            <div className="text-center p-6 bg-gray-900 border border-gray-800 rounded-lg">
+              <div className="text-4xl font-bold text-purple-400 mb-2">261</div>
+              <div className="text-gray-400">Active Startups</div>
             </div>
-            <div className="text-center p-6 bg-orange-50 rounded-lg">
-              <div className="text-4xl font-bold text-orange-600 mb-2">114</div>
-              <div className="text-gray-600">Events Hosted</div>
+            <div className="text-center p-6 bg-gray-900 border border-gray-800 rounded-lg">
+              <div className="text-4xl font-bold text-orange-400 mb-2">114</div>
+              <div className="text-gray-400">Events Hosted</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Countries Grid */}
-      <section className="py-16">
+      <section className="py-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Our Communities</h2>
+          <h2 className="text-4xl font-bold text-white mb-12 text-center">Our Communities</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {countries.map((country) => (
-              <div key={country.name} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-                <div className="bg-gradient-to-br from-green-500 to-blue-600 p-6 text-white text-center">
+              <div key={country.name} className="bg-gray-900 border border-gray-800 rounded-lg overflow-hidden hover:border-green-600 transition">
+                <div className="bg-gradient-to-br from-green-600 to-blue-600 p-6 text-white text-center">
                   <div className="text-6xl mb-3">{country.flag}</div>
                   <h3 className="text-2xl font-bold">BaD {country.name}</h3>
                 </div>
                 
                 <div className="p-6">
-                  <p className="text-gray-600 mb-4 text-sm">{country.description}</p>
+                  <p className="text-gray-400 mb-4 text-sm">{country.description}</p>
                   
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Members:</span>
-                      <span className="font-semibold text-gray-900">{country.members}</span>
+                      <span className="text-gray-500">Members:</span>
+                      <span className="font-semibold text-white">{country.members}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Startups:</span>
-                      <span className="font-semibold text-gray-900">{country.startups}</span>
+                      <span className="text-gray-500">Startups:</span>
+                      <span className="font-semibold text-white">{country.startups}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Events:</span>
-                      <span className="font-semibold text-gray-900">{country.events}</span>
+                      <span className="text-gray-500">Events:</span>
+                      <span className="font-semibold text-white">{country.events}</span>
                     </div>
                   </div>
                   
@@ -144,43 +144,43 @@ export default function Countries() {
       </section>
 
       {/* What We Do */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">What Our Country Chapters Do</h2>
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">What Our Country Chapters Do</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="text-center p-6 bg-gray-900 border border-gray-800 rounded-lg hover:border-blue-600 transition">
+              <div className="bg-blue-600/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Community Building</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold mb-3 text-white">Community Building</h3>
+              <p className="text-gray-400">
                 Regular meetups, workshops, and networking events to connect local innovators
               </p>
             </div>
             
-            <div className="text-center p-6">
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="text-center p-6 bg-gray-900 border border-gray-800 rounded-lg hover:border-green-600 transition">
+              <div className="bg-green-600/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Local Education</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold mb-3 text-white">Local Education</h3>
+              <p className="text-gray-400">
                 Tailored training programs addressing specific regional needs and opportunities
               </p>
             </div>
             
-            <div className="text-center p-6">
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="text-center p-6 bg-gray-900 border border-gray-800 rounded-lg hover:border-purple-600 transition">
+              <div className="bg-purple-600/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Startup Support</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold mb-3 text-white">Startup Support</h3>
+              <p className="text-gray-400">
                 Mentorship and resources for local startups to grow and succeed
               </p>
             </div>

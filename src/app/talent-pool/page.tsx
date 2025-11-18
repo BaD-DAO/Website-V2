@@ -53,7 +53,7 @@ export default function TalentPool() {
     : talents.filter(t => t.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-black pt-24">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,41 +65,41 @@ export default function TalentPool() {
       </section>
 
       {/* Stats */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="text-4xl font-bold text-green-600 mb-2">1,250+</div>
-              <div className="text-gray-600">Professionals</div>
+              <div className="text-4xl font-bold text-green-400 mb-2">1,250+</div>
+              <div className="text-gray-400">Professionals</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">15</div>
-              <div className="text-gray-600">Countries</div>
+              <div className="text-4xl font-bold text-blue-400 mb-2">15</div>
+              <div className="text-gray-400">Countries</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">50+</div>
-              <div className="text-gray-600">Skills</div>
+              <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
+              <div className="text-gray-400">Skills</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-orange-600 mb-2">92%</div>
-              <div className="text-gray-600">Match Rate</div>
+              <div className="text-4xl font-bold text-orange-400 mb-2">92%</div>
+              <div className="text-gray-400">Match Rate</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Categories */}
-      <section className="py-8 bg-gray-50">
+      <section className="py-8 bg-black border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-3">
             {categories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-lg font-semibold transition flex items-center gap-2 ${
+                className={`px-6 py-3 rounded-lg font-semibold transition flex items-center gap-2 border ${
                   selectedCategory === category.id
-                    ? 'bg-green-600 text-white'
-                    : 'bg-white text-gray-700 hover:bg-gray-100'
+                    ? 'bg-green-600 text-white border-green-600'
+                    : 'bg-gray-900 text-gray-400 hover:bg-gray-800 hover:text-white border-gray-800'
                 }`}
               >
                 <span>{category.icon}</span>
@@ -114,31 +114,31 @@ export default function TalentPool() {
       </section>
 
       {/* Talent Grid */}
-      <section className="py-16">
+      <section className="py-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredTalents.map((talent) => (
-              <div key={talent.id} className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition">
+              <div key={talent.id} className="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-green-600 transition">
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900">{talent.name}</h3>
-                    <p className="text-gray-600">{talent.role}</p>
+                    <h3 className="text-xl font-bold text-white">{talent.name}</h3>
+                    <p className="text-gray-400">{talent.role}</p>
                     <p className="text-sm text-gray-500">{talent.country}</p>
                   </div>
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                  <span className={`px-3 py-1 rounded-full text-xs font-semibold border ${
                     talent.available 
-                      ? 'bg-green-100 text-green-800' 
-                      : 'bg-gray-100 text-gray-800'
+                      ? 'bg-green-600/20 text-green-400 border-green-600/30' 
+                      : 'bg-gray-800 text-gray-400 border-gray-700'
                   }`}>
                     {talent.available ? 'Available' : 'Busy'}
                   </span>
                 </div>
 
                 <div className="mb-4">
-                  <p className="text-sm text-gray-600 mb-2">Experience: {talent.experience}</p>
+                  <p className="text-sm text-gray-400 mb-2">Experience: {talent.experience}</p>
                   <div className="flex flex-wrap gap-2">
                     {talent.skills.map((skill, index) => (
-                      <span key={index} className="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs">
+                      <span key={index} className="bg-blue-600/20 text-blue-400 px-2 py-1 rounded text-xs border border-blue-600/30">
                         {skill}
                       </span>
                     ))}
@@ -161,38 +161,38 @@ export default function TalentPool() {
       </section>
 
       {/* For Talent */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Join Our Talent Pool</h2>
-            <p className="text-xl text-gray-600">
+            <h2 className="text-3xl font-bold text-white mb-4">Join Our Talent Pool</h2>
+            <p className="text-xl text-gray-400">
               Get discovered by leading startups and organizations across Africa
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="text-center p-6">
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center p-6 bg-gray-900 border border-gray-800 rounded-lg hover:border-green-600 transition">
+              <div className="bg-green-600/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl">🎯</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Get Matched</h3>
-              <p className="text-gray-600">Connect with opportunities that fit your skills</p>
+              <h3 className="text-xl font-semibold mb-2 text-white">Get Matched</h3>
+              <p className="text-gray-400">Connect with opportunities that fit your skills</p>
             </div>
 
-            <div className="text-center p-6">
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center p-6 bg-gray-900 border border-gray-800 rounded-lg hover:border-blue-600 transition">
+              <div className="bg-blue-600/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl">💼</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Build Portfolio</h3>
-              <p className="text-gray-600">Showcase your work and achievements</p>
+              <h3 className="text-xl font-semibold mb-2 text-white">Build Portfolio</h3>
+              <p className="text-gray-400">Showcase your work and achievements</p>
             </div>
 
-            <div className="text-center p-6">
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center p-6 bg-gray-900 border border-gray-800 rounded-lg hover:border-purple-600 transition">
+              <div className="bg-purple-600/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl">🚀</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Grow Career</h3>
-              <p className="text-gray-600">Access training and mentorship opportunities</p>
+              <h3 className="text-xl font-semibold mb-2 text-white">Grow Career</h3>
+              <p className="text-gray-400">Access training and mentorship opportunities</p>
             </div>
           </div>
 

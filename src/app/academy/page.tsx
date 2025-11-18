@@ -43,7 +43,7 @@ export default function Academy() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-black pt-24">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -55,39 +55,39 @@ export default function Academy() {
       </section>
 
       {/* Overview */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">50+</div>
-              <div className="text-gray-600">Expert Instructors</div>
+              <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
+              <div className="text-gray-400">Expert Instructors</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">2,500+</div>
-              <div className="text-gray-600">Students Trained</div>
+              <div className="text-4xl font-bold text-blue-400 mb-2">2,500+</div>
+              <div className="text-gray-400">Students Trained</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-green-600 mb-2">95%</div>
-              <div className="text-gray-600">Job Placement Rate</div>
+              <div className="text-4xl font-bold text-green-400 mb-2">95%</div>
+              <div className="text-gray-400">Job Placement Rate</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Junior Level Courses */}
-      <section className="py-16">
+      <section className="py-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Junior Level Courses</h2>
-            <p className="text-xl text-gray-600">
+            <h2 className="text-4xl font-bold text-white mb-4">Junior Level Courses</h2>
+            <p className="text-xl text-gray-400">
               Perfect for beginners and those looking to start their journey in AI and blockchain
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {courses.junior.map((course, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-                <div className="bg-gradient-to-r from-purple-500 to-blue-500 p-6 text-white">
+              <div key={index} className="bg-gray-900 border border-gray-800 rounded-lg overflow-hidden hover:border-purple-600 transition">
+                <div className="bg-gradient-to-r from-purple-600 to-blue-600 p-6 text-white">
                   <h3 className="text-2xl font-bold mb-2">{course.title}</h3>
                   <div className="flex items-center gap-4 text-sm">
                     <span>⏱️ {course.duration}</span>
@@ -96,12 +96,12 @@ export default function Academy() {
                 </div>
                 
                 <div className="p-6">
-                  <h4 className="font-semibold mb-3 text-gray-900">What You'll Learn:</h4>
+                  <h4 className="font-semibold mb-3 text-white">What You'll Learn:</h4>
                   <ul className="space-y-2">
                     {course.topics.map((topic, i) => (
                       <li key={i} className="flex items-start">
-                        <span className="text-green-500 mr-2">✓</span>
-                        <span className="text-gray-600">{topic}</span>
+                        <span className="text-green-400 mr-2">✓</span>
+                        <span className="text-gray-400">{topic}</span>
                       </li>
                     ))}
                   </ul>
@@ -117,18 +117,18 @@ export default function Academy() {
       </section>
 
       {/* Enterprise Level Courses */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Enterprise Level Courses</h2>
-            <p className="text-xl text-gray-600">
+            <h2 className="text-4xl font-bold text-white mb-4">Enterprise Level Courses</h2>
+            <p className="text-xl text-gray-400">
               Advanced training for teams and organizations ready to implement cutting-edge technology
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {courses.enterprise.map((course, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition border-2 border-blue-200">
+              <div key={index} className="bg-gray-900 border-2 border-blue-600/30 rounded-lg overflow-hidden hover:border-blue-600 transition">
                 <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-6 text-white">
                   <h3 className="text-2xl font-bold mb-2">{course.title}</h3>
                   <div className="flex items-center gap-4 text-sm">
@@ -138,12 +138,12 @@ export default function Academy() {
                 </div>
                 
                 <div className="p-6">
-                  <h4 className="font-semibold mb-3 text-gray-900">What You'll Learn:</h4>
+                  <h4 className="font-semibold mb-3 text-white">What You'll Learn:</h4>
                   <ul className="space-y-2">
                     {course.topics.map((topic, i) => (
                       <li key={i} className="flex items-start">
-                        <span className="text-green-500 mr-2">✓</span>
-                        <span className="text-gray-600">{topic}</span>
+                        <span className="text-green-400 mr-2">✓</span>
+                        <span className="text-gray-400">{topic}</span>
                       </li>
                     ))}
                   </ul>
@@ -159,33 +159,33 @@ export default function Academy() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Why Choose BaD Academy?</h2>
+          <h2 className="text-3xl font-bold text-center text-white mb-12">Why Choose BaD Academy?</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+            <div className="bg-gray-900 border border-gray-800 p-6 rounded-lg text-center hover:border-purple-600 transition">
               <div className="text-4xl mb-3">🎓</div>
-              <h3 className="font-semibold mb-2">Industry Experts</h3>
-              <p className="text-gray-600 text-sm">Learn from professionals with real-world experience</p>
+              <h3 className="font-semibold mb-2 text-white">Industry Experts</h3>
+              <p className="text-gray-400 text-sm">Learn from professionals with real-world experience</p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+            <div className="bg-gray-900 border border-gray-800 p-6 rounded-lg text-center hover:border-blue-600 transition">
               <div className="text-4xl mb-3">💼</div>
-              <h3 className="font-semibold mb-2">Job Placement</h3>
-              <p className="text-gray-600 text-sm">Connect with hiring partners across Africa</p>
+              <h3 className="font-semibold mb-2 text-white">Job Placement</h3>
+              <p className="text-gray-400 text-sm">Connect with hiring partners across Africa</p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+            <div className="bg-gray-900 border border-gray-800 p-6 rounded-lg text-center hover:border-green-600 transition">
               <div className="text-4xl mb-3">🏆</div>
-              <h3 className="font-semibold mb-2">Certification</h3>
-              <p className="text-gray-600 text-sm">Earn recognized credentials for your skills</p>
+              <h3 className="font-semibold mb-2 text-white">Certification</h3>
+              <p className="text-gray-400 text-sm">Earn recognized credentials for your skills</p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+            <div className="bg-gray-900 border border-gray-800 p-6 rounded-lg text-center hover:border-orange-600 transition">
               <div className="text-4xl mb-3">🤝</div>
-              <h3 className="font-semibold mb-2">Community</h3>
-              <p className="text-gray-600 text-sm">Join a network of learners and professionals</p>
+              <h3 className="font-semibold mb-2 text-white">Community</h3>
+              <p className="text-gray-400 text-sm">Join a network of learners and professionals</p>
             </div>
           </div>
         </div>

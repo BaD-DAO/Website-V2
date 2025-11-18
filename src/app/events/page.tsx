@@ -33,7 +33,7 @@ export default function Events() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-black pt-24">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-orange-600 to-purple-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,7 +45,7 @@ export default function Events() {
       </section>
 
       {/* Tabs */}
-      <section className="py-8 bg-white border-b">
+      <section className="py-8 bg-gray-950 border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex gap-4">
             <button
@@ -53,7 +53,7 @@ export default function Events() {
               className={`px-6 py-3 rounded-lg font-semibold transition ${
                 activeTab === 'upcoming'
                   ? 'bg-orange-600 text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  : 'bg-gray-900 text-gray-400 hover:bg-gray-800 hover:text-white border border-gray-800'
               }`}
             >
               Upcoming Events
@@ -63,7 +63,7 @@ export default function Events() {
               className={`px-6 py-3 rounded-lg font-semibold transition ${
                 activeTab === 'organizing'
                   ? 'bg-orange-600 text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  : 'bg-gray-900 text-gray-400 hover:bg-gray-800 hover:text-white border border-gray-800'
               }`}
             >
               Event Organizing
@@ -73,7 +73,7 @@ export default function Events() {
               className={`px-6 py-3 rounded-lg font-semibold transition ${
                 activeTab === 'ambassadors'
                   ? 'bg-orange-600 text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  : 'bg-gray-900 text-gray-400 hover:bg-gray-800 hover:text-white border border-gray-800'
               }`}
             >
               Ambassadors
@@ -84,20 +84,20 @@ export default function Events() {
 
       {/* Upcoming Events Tab */}
       {activeTab === 'upcoming' && (
-        <section className="py-16">
+        <section className="py-16 bg-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Upcoming Events</h2>
+            <h2 className="text-3xl font-bold text-white mb-8">Upcoming Events</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {upcomingEvents.map((event) => (
-                <div key={event.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-                  <div className="bg-gradient-to-r from-orange-500 to-purple-500 p-4 text-white">
+                <div key={event.id} className="bg-gray-900 border border-gray-800 rounded-lg overflow-hidden hover:border-orange-600 transition">
+                  <div className="bg-gradient-to-r from-orange-600 to-purple-600 p-4 text-white">
                     <span className="bg-white/20 px-3 py-1 rounded-full text-sm">{event.type}</span>
                   </div>
                   
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{event.title}</h3>
-                    <div className="space-y-2 text-gray-600 mb-4">
+                    <h3 className="text-xl font-bold text-white mb-2">{event.title}</h3>
+                    <div className="space-y-2 text-gray-400 mb-4">
                       <div className="flex items-center">
                         <span className="mr-2">📅</span>
                         <span>{event.date}</span>
@@ -125,45 +125,45 @@ export default function Events() {
 
       {/* Event Organizing Tab */}
       {activeTab === 'organizing' && (
-        <section className="py-16">
+        <section className="py-16 bg-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Event Organizing as a Service</h2>
-              <p className="text-xl text-gray-600">
+              <h2 className="text-3xl font-bold text-white mb-4">Event Organizing as a Service</h2>
+              <p className="text-xl text-gray-400">
                 Let BuildaDAO help you organize impactful tech events in your community
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-2xl font-bold text-orange-600 mb-4">What We Offer</h3>
-                <ul className="space-y-3">
+              <div className="bg-gray-900 border border-gray-800 p-8 rounded-lg hover:border-orange-600 transition">
+                <h3 className="text-2xl font-bold text-orange-400 mb-4">What We Offer</h3>
+                <ul className="space-y-3 text-gray-400">
                   <li className="flex items-start">
-                    <span className="text-green-500 mr-2">✓</span>
+                    <span className="text-green-400 mr-2">✓</span>
                     <span>End-to-end event planning and execution</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-green-500 mr-2">✓</span>
+                    <span className="text-green-400 mr-2">✓</span>
                     <span>Speaker and mentor coordination</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-green-500 mr-2">✓</span>
+                    <span className="text-green-400 mr-2">✓</span>
                     <span>Marketing and promotion support</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-green-500 mr-2">✓</span>
+                    <span className="text-green-400 mr-2">✓</span>
                     <span>Venue and logistics management</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-green-500 mr-2">✓</span>
+                    <span className="text-green-400 mr-2">✓</span>
                     <span>Post-event community engagement</span>
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-2xl font-bold text-purple-600 mb-4">Event Types</h3>
-                <ul className="space-y-3">
+              <div className="bg-gray-900 border border-gray-800 p-8 rounded-lg hover:border-purple-600 transition">
+                <h3 className="text-2xl font-bold text-purple-400 mb-4">Event Types</h3>
+                <ul className="space-y-3 text-gray-400">
                   <li className="flex items-start">
                     <span className="mr-2">🎤</span>
                     <span>Conferences & Summits</span>
@@ -199,36 +199,36 @@ export default function Events() {
 
       {/* Ambassadors Tab */}
       {activeTab === 'ambassadors' && (
-        <section className="py-16">
+        <section className="py-16 bg-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Event Ambassadors Program</h2>
-              <p className="text-xl text-gray-600">
+              <h2 className="text-3xl font-bold text-white mb-4">Event Ambassadors Program</h2>
+              <p className="text-xl text-gray-400">
                 Join our network of passionate community leaders organizing events across Africa
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <div className="bg-white p-6 rounded-lg shadow-md text-center">
+              <div className="bg-gray-900 border border-gray-800 p-6 rounded-lg text-center hover:border-orange-600 transition">
                 <div className="text-4xl mb-3">🌟</div>
-                <h3 className="text-xl font-semibold mb-2">Recognition</h3>
-                <p className="text-gray-600">Get recognized as a BuildaDAO leader in your community</p>
+                <h3 className="text-xl font-semibold mb-2 text-white">Recognition</h3>
+                <p className="text-gray-400">Get recognized as a BuildaDAO leader in your community</p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-md text-center">
+              <div className="bg-gray-900 border border-gray-800 p-6 rounded-lg text-center hover:border-purple-600 transition">
                 <div className="text-4xl mb-3">🎁</div>
-                <h3 className="text-xl font-semibold mb-2">Resources</h3>
-                <p className="text-gray-600">Access funding, swag, and organizational support</p>
+                <h3 className="text-xl font-semibold mb-2 text-white">Resources</h3>
+                <p className="text-gray-400">Access funding, swag, and organizational support</p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-md text-center">
+              <div className="bg-gray-900 border border-gray-800 p-6 rounded-lg text-center hover:border-green-600 transition">
                 <div className="text-4xl mb-3">🌍</div>
-                <h3 className="text-xl font-semibold mb-2">Network</h3>
-                <p className="text-gray-600">Connect with ambassadors across the continent</p>
+                <h3 className="text-xl font-semibold mb-2 text-white">Network</h3>
+                <p className="text-gray-400">Connect with ambassadors across the continent</p>
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-orange-600 to-purple-600 text-white p-8 rounded-lg">
+            <div className="bg-gradient-to-r from-orange-600 to-purple-600 text-white p-8 rounded-lg border border-orange-600/30">
               <h3 className="text-2xl font-bold mb-4">Become an Ambassador</h3>
               <p className="mb-6">
                 Are you passionate about building tech communities? Apply to become a BuildaDAO Event Ambassador

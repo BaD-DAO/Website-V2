@@ -8,88 +8,88 @@ export default function First500() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-black pt-24">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
+      <section className="bg-black text-white py-32 border-b-2 border-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl font-bold mb-4">First 500 Startups</h1>
-          <p className="text-xl text-blue-100">
-            Supporting the next generation of African innovators with mentorship, resources, and community
-          </p>
+          <div className="text-center space-y-8">
+            <h1 className="text-6xl md:text-8xl font-bold">First 500 Startups</h1>
+            <p className="text-xl md:text-2xl max-w-4xl mx-auto">
+              Supporting the next generation of African innovators with mentorship, resources, and community
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 bg-white">
+      <section className="py-20 bg-black border-b-2 border-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="text-center p-6 bg-blue-50 rounded-lg">
-              <div className="text-4xl font-bold text-blue-600 mb-2">127</div>
-              <div className="text-gray-600">Startups Enrolled</div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="text-center p-8 bg-black border-2 border-white">
+              <div className="text-6xl font-bold text-white mb-2">127</div>
+              <div className="text-lg">Startups Enrolled</div>
             </div>
-            <div className="text-center p-6 bg-purple-50 rounded-lg">
-              <div className="text-4xl font-bold text-purple-600 mb-2">15</div>
-              <div className="text-gray-600">Countries</div>
+            <div className="text-center p-8 bg-black border-2 border-white">
+              <div className="text-6xl font-bold text-white mb-2">15</div>
+              <div className="text-lg">Countries</div>
             </div>
-            <div className="text-center p-6 bg-green-50 rounded-lg">
-              <div className="text-4xl font-bold text-green-600 mb-2">$2.5M</div>
-              <div className="text-gray-600">Funding Raised</div>
+            <div className="text-center p-8 bg-black border-2 border-white">
+              <div className="text-6xl font-bold text-white mb-2">$2.5M</div>
+              <div className="text-lg">Funding Raised</div>
             </div>
-            <div className="text-center p-6 bg-orange-50 rounded-lg">
-              <div className="text-4xl font-bold text-orange-600 mb-2">89%</div>
-              <div className="text-gray-600">Success Rate</div>
+            <div className="text-center p-8 bg-black border-2 border-white">
+              <div className="text-6xl font-bold text-white mb-2">89%</div>
+              <div className="text-lg">Success Rate</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Program Details */}
-      <section className="py-16">
+      <section className="py-20 bg-black border-b-2 border-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">What We Offer</h2>
+          <h2 className="text-5xl font-bold text-white mb-16 text-center">What We Offer</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-3 text-blue-600">Mentorship</h3>
-              <p className="text-gray-600">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+            <div className="bg-black border-2 border-white p-10 hover:bg-white hover:text-black transition-all duration-300">
+              <h3 className="text-3xl font-bold mb-4">Mentorship</h3>
+              <p className="text-lg">
                 Connect with experienced entrepreneurs and industry experts who guide you through every stage of your startup journey.
               </p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-3 text-purple-600">Resources</h3>
-              <p className="text-gray-600">
+            <div className="bg-black border-2 border-white p-10 hover:bg-white hover:text-black transition-all duration-300">
+              <h3 className="text-3xl font-bold mb-4">Resources</h3>
+              <p className="text-lg">
                 Access to tools, infrastructure, and educational materials to help you build and scale your business effectively.
               </p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-3 text-green-600">Community</h3>
-              <p className="text-gray-600">
+            <div className="bg-black border-2 border-white p-10 hover:bg-white hover:text-black transition-all duration-300">
+              <h3 className="text-3xl font-bold mb-4">Community</h3>
+              <p className="text-lg">
                 Join a vibrant network of founders, investors, and partners committed to building Africa's tech ecosystem.
               </p>
             </div>
           </div>
 
           {/* Startups Progress */}
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Startups</h2>
+          <h2 className="text-5xl font-bold text-white mb-12 text-center">Featured Startups</h2>
           
           <div className="space-y-6">
             {startups.map((startup) => (
-              <div key={startup.id} className="bg-white p-6 rounded-lg shadow-md">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+              <div key={startup.id} className="bg-black border-2 border-white p-8">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900">{startup.name}</h3>
-                    <p className="text-gray-600">{startup.country} • {startup.stage}</p>
+                    <h3 className="text-3xl font-bold text-white">{startup.name}</h3>
+                    <p className="text-lg mt-2">{startup.country} • {startup.stage}</p>
                   </div>
-                  <div className="mt-2 md:mt-0">
-                    <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
-                      {startup.progress}% Complete
-                    </span>
+                  <div className="mt-4 md:mt-0">
+                    <span className="bg-white text-black px-6 py-2 text-lg font-bold border-2 border-white">
                   </div>
                 </div>
                 
-                <div className="w-full bg-gray-200 rounded-full h-3">
+                <div className="w-full bg-gray-800 rounded-full h-3">
                   <div 
                     className="bg-gradient-to-r from-blue-600 to-purple-600 h-3 rounded-full transition-all"
                     style={{ width: `${startup.progress}%` }}
