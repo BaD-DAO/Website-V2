@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black pt-24">
       {/* Hero Section */}
-      <section className="bg-black text-white py-32 border-b-2 border-white">
+      <section className="bg-black text-white py-32 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-8">
             <h1 className="text-6xl md:text-8xl font-bold">
@@ -14,10 +14,10 @@ export default function Home() {
               Empowering African startups and talent through blockchain education, DAO infrastructure, and community-driven growth
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
-              <Link href="/first-500" className="bg-white text-black px-8 py-4 border-2 border-white font-semibold hover:bg-black hover:text-white transition-all duration-300 text-lg">
+              <Link href="/first-500" className="bg-white text-black px-8 py-4 font-semibold hover:bg-white/90 transition-all duration-300 text-lg rounded-lg">
                 Join First 500
               </Link>
-              <Link href="/academy" className="bg-black border-2 border-white text-white px-8 py-4 font-semibold hover:bg-white hover:text-black transition-all duration-300 text-lg">
+              <Link href="/academy" className="glass-strong text-white px-8 py-4 font-semibold hover:bg-white/10 transition-all duration-300 text-lg rounded-lg">
                 Explore Academy
               </Link>
             </div>
@@ -26,7 +26,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-black border-b-2 border-white">
+      <section className="py-20 bg-black border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-white mb-6">What is BuildaDAO?</h2>
@@ -37,9 +37,9 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-8 bg-black border-2 border-white hover:bg-white hover:text-black transition-all duration-300 group">
-              <div className="w-16 h-16 border-2 border-white flex items-center justify-center mx-auto mb-6 group-hover:bg-black group-hover:border-black transition-all duration-300">
-                <svg className="w-8 h-8 text-white group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="text-center p-8 glass-card glass-hover rounded-lg group">
+              <div className="w-16 h-16 glass flex items-center justify-center mx-auto mb-6 rounded-lg group-hover:bg-white/10 transition-all duration-300">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
               </div>
@@ -47,9 +47,9 @@ export default function Home() {
               <p>World-class AI and blockchain courses for all skill levels</p>
             </div>
             
-            <div className="text-center p-8 bg-black border-2 border-white hover:bg-white hover:text-black transition-all duration-300 group">
-              <div className="w-16 h-16 border-2 border-white flex items-center justify-center mx-auto mb-6 group-hover:bg-black group-hover:border-black transition-all duration-300">
-                <svg className="w-8 h-8 text-white group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="text-center p-8 glass-card glass-hover rounded-lg group">
+              <div className="w-16 h-16 glass flex items-center justify-center mx-auto mb-6 rounded-lg group-hover:bg-white/10 transition-all duration-300">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
@@ -57,9 +57,9 @@ export default function Home() {
               <p>Accelerating 500 innovative startups across the continent</p>
             </div>
             
-            <div className="text-center p-8 bg-black border-2 border-white hover:bg-white hover:text-black transition-all duration-300 group">
-              <div className="w-16 h-16 border-2 border-white flex items-center justify-center mx-auto mb-6 group-hover:bg-black group-hover:border-black transition-all duration-300">
-                <svg className="w-8 h-8 text-white group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="text-center p-8 glass-card glass-hover rounded-lg group">
+              <div className="w-16 h-16 glass flex items-center justify-center mx-auto mb-6 rounded-lg group-hover:bg-white/10 transition-all duration-300">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
@@ -71,12 +71,12 @@ export default function Home() {
       </section>
 
       {/* Programs Section */}
-      <section className="py-20 bg-black border-b-2 border-white">
+      <section className="py-20 bg-black border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-5xl font-bold text-center text-white mb-16">Our Programs</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Link href="/first-500" className="bg-black border-2 border-white p-10 hover:bg-white hover:text-black transition-all duration-300 group">
+            <Link href="/first-500" className="glass-card glass-hover p-10 rounded-lg group">
               <h3 className="text-3xl font-bold mb-4">First 500 Startups</h3>
               <p className="mb-6 text-lg">
                 Supporting the first 500 innovative startups with mentorship, resources, and community. 
@@ -85,7 +85,7 @@ export default function Home() {
               <span className="font-bold text-lg group-hover:underline">Learn More →</span>
             </Link>
             
-            <Link href="/academy" className="bg-black border-2 border-white p-10 hover:bg-white hover:text-black transition-all duration-300 group">
+            <Link href="/academy" className="glass-card glass-hover p-10 rounded-lg group">
               <h3 className="text-3xl font-bold mb-4">BaD Academy</h3>
               <p className="mb-6 text-lg">
                 Comprehensive AI and blockchain courses for junior developers and enterprise teams. 
@@ -94,7 +94,7 @@ export default function Home() {
               <span className="font-bold text-lg group-hover:underline">Explore Courses →</span>
             </Link>
             
-            <Link href="/talent-pool" className="bg-black border-2 border-white p-10 hover:bg-white hover:text-black transition-all duration-300 group">
+            <Link href="/talent-pool" className="glass-card glass-hover p-10 rounded-lg group">
               <h3 className="text-3xl font-bold mb-4">Talent Pool</h3>
               <p className="mb-6 text-lg">
                 Access our network of cybersecurity experts, designers, developers, marketers, 
@@ -103,7 +103,7 @@ export default function Home() {
               <span className="font-bold text-lg group-hover:underline">Browse Talent →</span>
             </Link>
             
-            <Link href="/events" className="bg-black border-2 border-white p-10 hover:bg-white hover:text-black transition-all duration-300 group">
+            <Link href="/events" className="glass-card glass-hover p-10 rounded-lg group">
               <h3 className="text-3xl font-bold mb-4">Events & Community</h3>
               <p className="mb-6 text-lg">
                 Join upcoming events, become an event ambassador, or leverage our event organizing services 
@@ -116,7 +116,7 @@ export default function Home() {
       </section>
 
       {/* Countries Section */}
-      <section className="py-20 bg-black border-b-2 border-white">
+      <section className="py-20 bg-black border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-5xl font-bold text-center text-white mb-6">BuildaDAO Across Africa</h2>
           <p className="text-center text-white mb-16 text-xl">
@@ -128,7 +128,7 @@ export default function Home() {
               <Link 
                 key={country}
                 href="/countries" 
-                className="bg-black border-2 border-white text-white p-8 text-center font-bold hover:bg-white hover:text-black transition-all duration-300 text-lg"
+                className="glass-card glass-hover text-white p-8 text-center font-bold transition-all duration-300 text-lg rounded-lg"
               >
                 BaD {country}
               </Link>
@@ -144,7 +144,7 @@ export default function Home() {
           <p className="text-xl mb-10">
             Join our community of innovators, learners, and builders shaping Africa's decentralized future
           </p>
-          <Link href="/first-500" className="bg-white text-black border-2 border-white px-10 py-4 font-bold hover:bg-black hover:text-white transition-all duration-300 inline-block text-lg">
+          <Link href="/first-500" className="bg-white text-black px-10 py-4 font-bold hover:bg-white/90 transition-all duration-300 inline-block text-lg rounded-lg">
             Get Started Today
           </Link>
         </div>

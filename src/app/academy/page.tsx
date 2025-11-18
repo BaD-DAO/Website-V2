@@ -45,7 +45,7 @@ export default function Academy() {
   return (
     <div className="min-h-screen bg-black pt-24">
       {/* Hero Section */}
-      <section className="bg-black text-white py-32 border-b-2 border-white">
+      <section className="bg-black text-white py-32 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-8">
             <h1 className="text-6xl md:text-8xl font-bold">BaD Academy</h1>
@@ -57,18 +57,18 @@ export default function Academy() {
       </section>
 
       {/* Overview */}
-      <section className="py-20 bg-black border-b-2 border-white">
+      <section className="py-20 bg-black border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-8 bg-black border-2 border-white">
+            <div className="text-center p-8 glass-card rounded-lg">
               <div className="text-6xl font-bold mb-2">50+</div>
               <div className="text-lg">Expert Instructors</div>
             </div>
-            <div className="text-center p-8 bg-black border-2 border-white">
+            <div className="text-center p-8 glass-card rounded-lg">
               <div className="text-6xl font-bold mb-2">2,500+</div>
               <div className="text-lg">Students Trained</div>
             </div>
-            <div className="text-center p-8 bg-black border-2 border-white">
+            <div className="text-center p-8 glass-card rounded-lg">
               <div className="text-6xl font-bold mb-2">95%</div>
               <div className="text-lg">Job Placement Rate</div>
             </div>
@@ -77,7 +77,7 @@ export default function Academy() {
       </section>
 
       {/* Junior Level Courses */}
-      <section className="py-20 bg-black border-b-2 border-white">
+      <section className="py-20 bg-black border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
             <h2 className="text-5xl font-bold text-white mb-6">Junior Level Courses</h2>
@@ -88,12 +88,12 @@ export default function Academy() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {courses.junior.map((course, index) => (
-              <div key={index} className="bg-black border-2 border-white overflow-hidden hover:bg-white hover:text-black transition-all duration-300 group">
-                <div className="bg-white text-black p-8 group-hover:bg-black group-hover:text-white transition-all duration-300">
+              <div key={index} className="glass-card glass-hover overflow-hidden rounded-lg group">
+                <div className="bg-white/10 p-8 group-hover:bg-white/20 transition-all duration-300">
                   <h3 className="text-2xl font-bold mb-4">{course.title}</h3>
                   <div className="flex items-center gap-4 text-lg">
                     <span>⏱️ {course.duration}</span>
-                    <span className="border-2 border-current px-3 py-1">{course.level}</span>
+                    <span className="glass px-3 py-1 rounded-lg">{course.level}</span>
                   </div>
                 </div>
                 
@@ -108,7 +108,7 @@ export default function Academy() {
                     ))}
                   </ul>
                   
-                  <button className="mt-8 w-full bg-white text-black border-2 border-white py-3 font-bold group-hover:bg-black group-hover:text-white group-hover:border-black transition-all duration-300">
+                  <button className="mt-8 w-full bg-white text-black py-3 font-bold hover:bg-white/90 transition-all duration-300 rounded-lg">
                     Enroll Now
                   </button>
                 </div>
@@ -119,7 +119,7 @@ export default function Academy() {
       </section>
 
       {/* Enterprise Level Courses */}
-      <section className="py-20 bg-black border-b-2 border-white">
+      <section className="py-20 bg-black border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
             <h2 className="text-5xl font-bold text-white mb-6">Enterprise Level Courses</h2>
@@ -130,12 +130,12 @@ export default function Academy() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {courses.enterprise.map((course, index) => (
-              <div key={index} className="bg-black border-2 border-white overflow-hidden hover:bg-white hover:text-black transition-all duration-300 group">
-                <div className="bg-white text-black p-8 group-hover:bg-black group-hover:text-white transition-all duration-300">
+              <div key={index} className="glass-card glass-hover overflow-hidden rounded-lg group">
+                <div className="bg-white/10 p-8 group-hover:bg-white/20 transition-all duration-300">
                   <h3 className="text-2xl font-bold mb-4">{course.title}</h3>
                   <div className="flex items-center gap-4 text-lg">
                     <span>⏱️ {course.duration}</span>
-                    <span className="border-2 border-current px-3 py-1">{course.level}</span>
+                    <span className="glass px-3 py-1 rounded-lg">{course.level}</span>
                   </div>
                 </div>
                 
@@ -150,7 +150,7 @@ export default function Academy() {
                     ))}
                   </ul>
                   
-                  <button className="mt-8 w-full bg-white text-black border-2 border-white py-3 font-bold group-hover:bg-black group-hover:text-white group-hover:border-black transition-all duration-300">
+                  <button className="mt-8 w-full bg-white text-black py-3 font-bold hover:bg-white/90 transition-all duration-300 rounded-lg">
                     Contact Sales
                   </button>
                 </div>
@@ -167,7 +167,7 @@ export default function Academy() {
           <p className="text-xl mb-10">
             Transform your career with cutting-edge AI and blockchain education
           </p>
-          <button className="bg-white text-black border-2 border-white px-10 py-4 font-bold hover:bg-black hover:text-white transition-all duration-300 text-lg">
+          <button className="bg-white text-black px-10 py-4 font-bold hover:bg-white/90 transition-all duration-300 text-lg rounded-lg">
             Browse All Courses
           </button>
         </div>
