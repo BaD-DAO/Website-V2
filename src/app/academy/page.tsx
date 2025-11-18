@@ -43,10 +43,10 @@ export default function Academy() {
   };
 
   return (
-    <div className="min-h-screen bg-black pt-24">
+    <div className="min-h-screen bg-black">
       {/* Hero Section */}
-      <section className="bg-black text-white py-32 border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="min-h-screen bg-black text-white flex items-center justify-center border-b border-white/10 pt-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center space-y-8">
             <h1 className="text-6xl md:text-8xl font-bold">BaD Academy</h1>
             <p className="text-xl md:text-2xl max-w-4xl mx-auto">
