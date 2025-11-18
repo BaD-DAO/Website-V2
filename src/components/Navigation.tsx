@@ -13,10 +13,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 text-white font-bold text-xl hover:opacity-80 transition-opacity">
-            <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center shadow-lg">
-              <span className="text-black font-bold text-sm">BaD</span>
-            </div>
-            <span className="tracking-tight">BuildaDAO</span>
+            <img src="/logo.png" alt="BuildaDAO" className="h-10 w-auto" />
           </Link>
           
           {/* Desktop Navigation */}

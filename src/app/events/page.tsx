@@ -43,9 +43,9 @@ export default function Events() {
                   <div className="p-8">
                     <h3 className="text-2xl font-bold mb-6">{event.title}</h3>
                     <div className="space-y-3 mb-6">
-                      <div className="flex items-center text-lg"><span className="mr-3">📅</span><span>{event.date}</span></div>
-                      <div className="flex items-center text-lg"><span className="mr-3">📍</span><span>{event.location}</span></div>
-                      <div className="flex items-center text-lg"><span className="mr-3">👥</span><span>{event.attendees} attendees</span></div>
+                      <div className="text-lg"><strong>Date:</strong> {event.date}</div>
+                      <div className="text-lg"><strong>Location:</strong> {event.location}</div>
+                      <div className="text-lg"><strong>Attendees:</strong> {event.attendees}</div>
                     </div>
                     <button className="w-full bg-white text-black border-2 border-white py-3 font-bold group-hover:bg-black group-hover:text-white group-hover:border-black transition-all duration-300">Register Now</button>
                   </div>
@@ -77,11 +77,11 @@ export default function Events() {
               <div className="bg-black border-2 border-white p-10">
                 <h3 className="text-3xl font-bold mb-6">Event Types</h3>
                 <ul className="space-y-4 text-lg">
-                  <li className="flex items-start"><span className="mr-3">🎤</span><span>Conferences & Summits</span></li>
-                  <li className="flex items-start"><span className="mr-3">💻</span><span>Hackathons & Coding Challenges</span></li>
-                  <li className="flex items-start"><span className="mr-3">🎓</span><span>Workshops & Training Sessions</span></li>
-                  <li className="flex items-start"><span className="mr-3">🤝</span><span>Networking & Meetups</span></li>
-                  <li className="flex items-start"><span className="mr-3">🚀</span><span>Pitch Competitions</span></li>
+                  <li className="flex items-start"><span className="mr-3">•</span><span>Conferences & Summits</span></li>
+                  <li className="flex items-start"><span className="mr-3">•</span><span>Hackathons & Coding Challenges</span></li>
+                  <li className="flex items-start"><span className="mr-3">•</span><span>Workshops & Training Sessions</span></li>
+                  <li className="flex items-start"><span className="mr-3">•</span><span>Networking & Meetups</span></li>
+                  <li className="flex items-start"><span className="mr-3">•</span><span>Pitch Competitions</span></li>
                 </ul>
               </div>
             </div>
@@ -98,17 +98,14 @@ export default function Events() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
               <div className="bg-black border-2 border-white p-10 text-center hover:bg-white hover:text-black transition-all duration-300">
-                <div className="text-6xl mb-4">🌟</div>
                 <h3 className="text-2xl font-bold mb-4">Recognition</h3>
                 <p className="text-lg">Get recognized as a BuildaDAO leader in your community</p>
               </div>
               <div className="bg-black border-2 border-white p-10 text-center hover:bg-white hover:text-black transition-all duration-300">
-                <div className="text-6xl mb-4">🎁</div>
                 <h3 className="text-2xl font-bold mb-4">Resources</h3>
                 <p className="text-lg">Access funding, swag, and organizational support</p>
               </div>
               <div className="bg-black border-2 border-white p-10 text-center hover:bg-white hover:text-black transition-all duration-300">
-                <div className="text-6xl mb-4">🌍</div>
                 <h3 className="text-2xl font-bold mb-4">Network</h3>
                 <p className="text-lg">Connect with ambassadors across the continent</p>
               </div>

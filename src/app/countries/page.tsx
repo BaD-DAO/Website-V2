@@ -2,7 +2,6 @@ export default function Countries() {
   const countries = [
     {
       name: 'Ethiopia',
-      flag: '🇪🇹',
       members: 450,
       startups: 32,
       events: 12,
@@ -10,7 +9,6 @@ export default function Countries() {
     },
     {
       name: 'Ghana',
-      flag: '🇬🇭',
       members: 380,
       startups: 28,
       events: 15,
@@ -18,7 +16,6 @@ export default function Countries() {
     },
     {
       name: 'Cameroon',
-      flag: '🇨🇲',
       members: 290,
       startups: 21,
       events: 9,
@@ -26,7 +23,6 @@ export default function Countries() {
     },
     {
       name: 'Uganda',
-      flag: '🇺🇬',
       members: 320,
       startups: 24,
       events: 11,
@@ -34,7 +30,6 @@ export default function Countries() {
     },
     {
       name: 'Botswana',
-      flag: '🇧🇼',
       members: 210,
       startups: 15,
       events: 7,
@@ -42,7 +37,6 @@ export default function Countries() {
     },
     {
       name: 'Kenya',
-      flag: '🇰🇪',
       members: 520,
       startups: 41,
       events: 18,
@@ -50,7 +44,6 @@ export default function Countries() {
     },
     {
       name: 'Nigeria',
-      flag: '🇳🇬',
       members: 680,
       startups: 53,
       events: 22,
@@ -58,7 +51,6 @@ export default function Countries() {
     },
     {
       name: 'South Africa',
-      flag: '🇿🇦',
       members: 590,
       startups: 47,
       events: 20,
@@ -113,8 +105,7 @@ export default function Countries() {
             {countries.map((country) => (
               <div key={country.name} className="bg-black border-2 border-white overflow-hidden hover:bg-white hover:text-black transition-all duration-300 group">
                 <div className="bg-white text-black p-8 text-center group-hover:bg-black group-hover:text-white transition-all duration-300">
-                  <div className="text-6xl mb-4">{country.flag}</div>
-                  <h3 className="text-2xl font-bold">BaD {country.name}</h3>
+                  <h3 className="text-3xl font-bold">BaD {country.name}</h3>
                 </div>
                 
                 <div className="p-6">
