@@ -7,8 +7,8 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl">
-      <div className="bg-black/80 backdrop-blur-sm border border-white/10 px-6 rounded-lg shadow-lg">
+    <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl mx-auto">
+      <div className="bg-black/80 backdrop-blur-sm border border-white/10 px-4 sm:px-6 rounded-lg shadow-lg">
         <div className="flex items-center h-16 relative">
           {/* Logo - Left */}
           <div className="flex-1 flex items-center">

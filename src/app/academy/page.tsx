@@ -92,7 +92,7 @@ export default function Academy() {
                 <div className="border-b border-white/10 p-8">
                   <h3 className="text-2xl font-semibold mb-4">{course.title}</h3>
                   <div className="flex items-center gap-4 text-lg text-white/70">
-                    <span>⏱️ {course.duration}</span>
+                    <span>{course.duration}</span>
                     <span className="badge">{course.level}</span>
                   </div>
                 </div>
@@ -134,7 +134,7 @@ export default function Academy() {
                 <div className="border-b border-white/10 p-8">
                   <h3 className="text-2xl font-semibold mb-4">{course.title}</h3>
                   <div className="flex items-center gap-4 text-lg text-white/70">
-                    <span>⏱️ {course.duration}</span>
+                    <span>{course.duration}</span>
                     <span className="badge">{course.level}</span>
                   </div>
                 </div>
