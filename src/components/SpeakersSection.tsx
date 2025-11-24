@@ -54,39 +54,38 @@ export default function SpeakersSection() {
       <div className="padding-global">
         <div className="container-large">
           <div className="header">
-            <h2 className="slide-left">Meet Our Speakers</h2>
+            <h2 className="slide-left">What Is BuildaDAO?</h2>
             <div className="max-description is-40">
               <div className="text-color-secondary slide-right">
-                Gain insights from world-class leaders, innovators, and experts who are shaping the future of AI. Each speaker brings unique perspectives, real-world experience, and actionable knowledge you can apply right away.
-              </div>
+              BuildaDAO is a decentralized autonomous organization dedicated to fostering innovation, education, and entrepreneurship across Africa through blockchain technology and community collaboration.              </div>
             </div>
           </div>
           <div className="gap-section-medium"></div>
           <div className="meet_wrap slide_down">
-            <div className="swiper w-dyn-list">
-              <Swiper
-                onSwiper={(swiper) => {
-                  swiperRef.current = swiper;
-                }}
-                modules={[Mousewheel, Keyboard]}
-                speed={700}
-                loop={false}
-                slidesPerView={1}
-                spaceBetween={16}
-                mousewheel={{ forceToAxis: true }}
-                keyboard={{ enabled: true, onlyInViewport: true }}
-                breakpoints={{
-                  768: {
-                    slidesPerView: 2,
-                    spaceBetween: 24,
-                  },
-                  992: {
-                    slidesPerView: 3,
-                    spaceBetween: 24,
-                  },
-                }}
-                className="meet_list swiper-wrapper w-dyn-items"
-              >
+            <Swiper
+              onSwiper={(swiper) => {
+                swiperRef.current = swiper;
+              }}
+              modules={[Mousewheel, Keyboard]}
+              speed={700}
+              loop={false}
+              slidesPerView={1}
+              spaceBetween={16}
+              mousewheel={{ forceToAxis: true }}
+              keyboard={{ enabled: true, onlyInViewport: true }}
+              breakpoints={{
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 24,
+                },
+                992: {
+                  slidesPerView: 3,
+                  spaceBetween: 24,
+                },
+              }}
+              className="swiper w-dyn-list"
+              wrapperClass="meet_list swiper-wrapper w-dyn-items"
+            >
                 {speakers.map((speaker, index) => (
                   <SwiperSlide 
                     key={index} 
@@ -100,7 +99,7 @@ export default function SpeakersSection() {
                         <div className="gradient_blue"></div>
                       </div>
                       <div className="meet_details">
-                        <div className="text-2xl">{speaker.name}</div>
+                        <div className="text-2xl speaker-name">{speaker.name.toUpperCase()}</div>
                         <div className="meet_summary">
                           <div className="text-color-secondary text-style-2lines">
                             {speaker.description}
@@ -122,8 +121,7 @@ export default function SpeakersSection() {
                     />
                   </SwiperSlide>
                 ))}
-              </Swiper>
-            </div>
+            </Swiper>
             <div className="arrow_group">
               <div className="arrow slide_prev" onClick={() => swiperRef.current?.slidePrev()}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 24" fill="none" className="icon-1x1-medium">
