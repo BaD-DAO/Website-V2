@@ -3,8 +3,8 @@
 import { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import type { Swiper as SwiperType } from 'swiper';
+import { Mousewheel, Keyboard } from 'swiper/modules';
 import 'swiper/css';
-import Image from 'next/image';
 
 const speakers = [
   {
@@ -63,54 +63,67 @@ export default function SpeakersSection() {
           </div>
           <div className="gap-section-medium"></div>
           <div className="meet_wrap slide_down">
-            <Swiper
-              onSwiper={(swiper) => {
-                swiperRef.current = swiper;
-              }}
-              speed={700}
-              loop={false}
-              slidesPerView={1}
-              spaceBetween={16}
-              breakpoints={{
-                768: {
-                  slidesPerView: 2,
-                  spaceBetween: 24,
-                },
-                992: {
-                  slidesPerView: 3,
-                  spaceBetween: 24,
-                },
-              }}
-              className="swiper"
-            >
-              {speakers.map((speaker, index) => (
-                <SwiperSlide key={index} className="meet_item swiper-slide">
-                  <a href={`/speakers/${speaker.slug}`} className="meet_content w-inline-block">
-                    <div className="meet_gradient">
-                      <div className="gradient_black"></div>
-                      <div className="gradient_blue"></div>
-                    </div>
-                    <div className="meet_details">
-                      <div className="text-2xl">{speaker.name}</div>
-                      <div className="meet_summary">
-                        <div className="text-color-secondary text-style-2lines">
-                          {speaker.description}
+            <div className="swiper w-dyn-list">
+              <Swiper
+                onSwiper={(swiper) => {
+                  swiperRef.current = swiper;
+                }}
+                modules={[Mousewheel, Keyboard]}
+                speed={700}
+                loop={false}
+                slidesPerView={1}
+                spaceBetween={16}
+                mousewheel={{ forceToAxis: true }}
+                keyboard={{ enabled: true, onlyInViewport: true }}
+                breakpoints={{
+                  768: {
+                    slidesPerView: 2,
+                    spaceBetween: 24,
+                  },
+                  992: {
+                    slidesPerView: 3,
+                    spaceBetween: 24,
+                  },
+                }}
+                className="meet_list swiper-wrapper w-dyn-items"
+              >
+                {speakers.map((speaker, index) => (
+                  <SwiperSlide 
+                    key={index} 
+                    className="meet_item swiper-slide w-dyn-item"
+                    data-w-id="ad3c1389-fdb5-f287-14c4-c8debac25f07"
+                    role="listitem"
+                  >
+                    <a href={`/speakers/${speaker.slug}`} className="meet_content w-inline-block">
+                      <div className="meet_gradient">
+                        <div className="gradient_black"></div>
+                        <div className="gradient_blue"></div>
+                      </div>
+                      <div className="meet_details">
+                        <div className="text-2xl">{speaker.name}</div>
+                        <div className="meet_summary">
+                          <div className="text-color-secondary text-style-2lines">
+                            {speaker.description}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </a>
-                  <div className="img-wrapper">
-                    <Image
-                      src={speaker.image}
-                      alt={speaker.name}
-                      fill
+                    </a>
+                    <img 
+                      src={speaker.image} 
+                      loading="lazy" 
+                      alt="" 
+                      sizes="100vw" 
+                      srcSet={
+                        speaker.image === '/speaker-5.png' 
+                          ? `${speaker.image} 1296w`
+                          : `${speaker.image.replace('.png', '-p-500.png')} 500w, ${speaker.image.replace('.png', '-p-800.png')} 800w, ${speaker.image.replace('.png', '-p-1080.png')} 1080w, ${speaker.image} 1296w`
+                      }
                       className="img"
-                      sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 33vw"
                     />
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
             <div className="arrow_group">
               <div className="arrow slide_prev" onClick={() => swiperRef.current?.slidePrev()}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 24" fill="none" className="icon-1x1-medium">
