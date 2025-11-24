@@ -129,3 +129,235 @@ body {
   transform: translateY(-1px);
   box-shadow: 0 4px 16px rgba(255, 255, 255, 0.1);
 }
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Speakers Section Styles - from congra-temlis */
+.section_meet {
+  position: relative;
+  background: #000000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.padding-section-medium {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.padding-global {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.container-large {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.header h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.max-description.is-40 {
+  max-width: 40rem;
+}
+
+.text-color-secondary {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.text-style-2lines {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.gap-section-medium {
+  margin-bottom: 3rem;
+}
+
+.meet_wrap {
+  position: relative;
+}
+
+.meet_item {
+  position: relative;
+  height: auto;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.meet_content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.meet_gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.gradient_black {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 50%, transparent 100%);
+}
+
+.gradient_blue {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom right, rgba(37, 98, 255, 0.3) 0%, transparent 60%);
+}
+
+.meet_details {
+  position: relative;
+  z-index: 2;
+}
+
+.meet_details .text-2xl {
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.meet_summary {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.meet_item .img-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.meet_item .img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.arrow_group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 20;
+}
+
+.arrow {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.arrow:hover {
+  opacity: 0.8;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.icon-1x1-medium {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Animation classes */
+.slide-left,
+.slide-right,
+.slide_down {
+  opacity: 1;
+}
+
+@media (max-width: 991px) {
+  .padding-section-medium {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .header h2 {
+    font-size: 2.5rem;
+  }
+  
+  .meet_item {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 767px) {
+  .padding-global {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .header h2 {
+    font-size: 2rem;
+  }
+  
+  .meet_item {
+    min-height: 450px;
+  }
+}

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import LiquidEther from '@/components/LiquidEther';
+import SpeakersSection from '@/components/SpeakersSection';
 
 export default function Home() {
   return (
@@ -49,6 +50,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Meet Our Speakers Section */}
+      <SpeakersSection />
 
       {/* About Section */}
       <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-black border-b border-white/10">
