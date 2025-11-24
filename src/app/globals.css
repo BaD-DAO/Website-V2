@@ -297,6 +297,7 @@ body {
 .meet_details {
   position: relative;
   z-index: 2;
+  margin-top: auto;
 }
 
 .meet_details .text-2xl {
