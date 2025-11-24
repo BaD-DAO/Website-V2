@@ -13,7 +13,7 @@ export default function Navigation() {
           {/* Logo - Left */}
           <div className="flex-1 flex items-center">
             <Link href="/" className="flex items-center gap-2 text-white font-bold text-xl hover:opacity-80 transition-opacity">
-              <img src="/logo.png" alt="BuildaDAO" className="h-10 w-auto" />
+              <img src="/logos/logo.png" alt="BuildaDAO" className="h-10 w-auto" />
             </Link>
           </div>
           

@@ -18,9 +18,9 @@ export const metadata: Metadata = {
   title: "BuildaDAO - Building the Future of Decentralized Innovation",
   description: "BuildaDAO empowers startups and talent across Africa through blockchain education, DAO infrastructure, and community-driven innovation.",
   icons: {
-    icon: '/logo.png',
-    shortcut: '/logo.png',
-    apple: '/logo.png',
+    icon: '/logos/logo.png',
+    shortcut: '/logos/logo.png',
+    apple: '/logos/logo.png',
   },
   viewport: {
     width: 'device-width',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     description: "BuildaDAO empowers startups and talent across Africa through blockchain education, DAO infrastructure, and community-driven innovation.",
     images: [
       {
-        url: '/logo.png',
+        url: '/logos/logo.png',
         width: 1200,
         height: 630,
         alt: 'BuildaDAO Logo',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "BuildaDAO - Building the Future of Decentralized Innovation",
     description: "BuildaDAO empowers startups and talent across Africa through blockchain education, DAO infrastructure, and community-driven innovation.",
-    images: ['/logo.png'],
+    images: ['/logos/logo.png'],
   },
 };
 

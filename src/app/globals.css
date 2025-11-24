@@ -219,20 +219,20 @@ body {
 .text-color-secondary {
   color: rgba(255, 255, 255, 0.8);
   font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
-  font-size: 1.125rem;
+  font-size: 0.875rem;
   line-height: 1.75;
   font-weight: 400;
 }
 
 @media (min-width: 640px) {
   .text-color-secondary {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width: 768px) {
   .text-color-secondary {
-    font-size: 1.5rem;
+    font-size: 1.125rem;
   }
 }
 

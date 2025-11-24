@@ -1,8 +1,33 @@
+'use client';
+
 import Link from 'next/link';
+import { useRef } from 'react';
 import LiquidEther from '@/components/LiquidEther';
-import SpeakersSection from '@/components/SpeakersSection';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import type { Swiper as SwiperType } from 'swiper';
+import { Mousewheel, Keyboard } from 'swiper/modules';
+import 'swiper/css';
+
+const cards = [
+  {
+    title: "Education",
+    description: "World-class AI and blockchain courses for all skill levels",
+    image: "/images/home/education.jpg",
+  },
+  {
+    title: "Startup Support",
+    description: "Accelerating 500 innovative startups across the continent",
+    image: "/images/home/startup-support.jpg",
+  },
+  {
+    title: "Talent Network",
+    description: "Connecting skilled professionals with opportunities",
+    image: "/images/home/talent-network.jpg",
+  }
+];
 
 export default function Home() {
+  const swiperRef = useRef<SwiperType | null>(null);
   return (
     <div className="min-h-screen bg-black">
       {/* Hero Section */}
@@ -51,52 +76,79 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Meet Our Speakers Section */}
-      <SpeakersSection />
-
-      {/* About Section */}
-      <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-black border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 md:mb-20">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 md:mb-8 px-4 leading-tight">What is BuildaDAO?</h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl mx-auto px-4 leading-relaxed">
-              BuildaDAO is a decentralized autonomous organization dedicated to fostering innovation, 
-              education, and entrepreneurship across Africa through blockchain technology and community collaboration.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
-            <div className="text-center p-10 md:p-12 card group">
-              <div className="w-20 h-20 md:w-24 md:h-24 border-2 border-white/20 group-hover:border-white/40 flex items-center justify-center mx-auto mb-8 rounded-xl transition-colors">
-                <svg className="w-10 h-10 md:w-12 md:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
+      {/* What Is BuildaDAO Section */}
+      <section className="section_meet">
+        <div className="padding-section-medium"></div>
+        <div className="padding-global">
+          <div className="container-large">
+            <div className="header">
+              <h2 className="slide-left">What Is BuildaDAO?</h2>
+              <div className="max-description is-40">
+                <div className="text-color-secondary slide-right">
+                  BuildaDAO is a decentralized autonomous organization dedicated to fostering innovation, education, and entrepreneurship across Africa through blockchain technology and community collaboration.
+                </div>
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">Education</h3>
-              <p className="text-white/70 text-base md:text-lg leading-relaxed">World-class AI and blockchain courses for all skill levels</p>
             </div>
-            
-            <div className="text-center p-10 md:p-12 card group">
-              <div className="w-20 h-20 md:w-24 md:h-24 border-2 border-white/20 group-hover:border-white/40 flex items-center justify-center mx-auto mb-8 rounded-xl transition-colors">
-                <svg className="w-10 h-10 md:w-12 md:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">Startup Support</h3>
-              <p className="text-white/70 text-base md:text-lg leading-relaxed">Accelerating 500 innovative startups across the continent</p>
-            </div>
-            
-            <div className="text-center p-10 md:p-12 card group">
-              <div className="w-20 h-20 md:w-24 md:h-24 border-2 border-white/20 group-hover:border-white/40 flex items-center justify-center mx-auto mb-8 rounded-xl transition-colors">
-                <svg className="w-10 h-10 md:w-12 md:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">Talent Network</h3>
-              <p className="text-white/70 text-base md:text-lg leading-relaxed">Connecting skilled professionals with opportunities</p>
+            <div className="gap-section-medium"></div>
+            <div className="meet_wrap slide_down">
+              <Swiper
+                onSwiper={(swiper) => {
+                  swiperRef.current = swiper;
+                }}
+                modules={[Mousewheel, Keyboard]}
+                speed={700}
+                loop={false}
+                slidesPerView={1}
+                spaceBetween={16}
+                mousewheel={{ forceToAxis: true }}
+                keyboard={{ enabled: true, onlyInViewport: true }}
+                breakpoints={{
+                  768: {
+                    slidesPerView: 2,
+                    spaceBetween: 24,
+                  },
+                  992: {
+                    slidesPerView: 3,
+                    spaceBetween: 24,
+                  },
+                }}
+                className="swiper w-dyn-list"
+                wrapperClass="meet_list swiper-wrapper w-dyn-items"
+              >
+                {cards.map((card, index) => (
+                  <SwiperSlide 
+                    key={index} 
+                    className="meet_item swiper-slide w-dyn-item"
+                    data-w-id="ad3c1389-fdb5-f287-14c4-c8debac25f07"
+                    role="listitem"
+                  >
+                    <a href="#" className="meet_content w-inline-block">
+                      <div className="meet_gradient">
+                        <div className="gradient_black"></div>
+                        <div className="gradient_blue"></div>
+                      </div>
+                      <div className="meet_details">
+                        <div className="text-2xl speaker-name">{card.title.toUpperCase()}</div>
+                        <div className="meet_summary">
+                          <div className="text-color-secondary text-style-2lines">
+                            {card.description}
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                    <img 
+                      src={card.image} 
+                      loading="lazy" 
+                      alt={card.title} 
+                      className="img"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
           </div>
         </div>
+        <div className="padding-section-medium"></div>
       </section>
 
       {/* Programs Section */}
