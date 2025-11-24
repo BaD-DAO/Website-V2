@@ -279,7 +279,9 @@ body {
   right: 0;
   bottom: 0;
   background: linear-gradient(to bottom right, rgba(37, 98, 255, 0.3) 0%, transparent 60%);
-  transition: opacity 0.4s ease, background 0.4s ease;
+  transform: translateY(100%);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease, background 0.4s ease;
+  opacity: 0;
 }
 
 .meet_item:hover .gradient_black {
@@ -288,6 +290,7 @@ body {
 
 .meet_item:hover .gradient_blue {
   opacity: 1;
+  transform: translateY(0);
   background: linear-gradient(to bottom right, rgba(37, 98, 255, 0.5) 0%, transparent 60%);
 }
 
@@ -305,6 +308,17 @@ body {
   color: rgba(255, 255, 255, 0.8);
   font-size: 0.875rem;
   line-height: 1.5;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.meet_item:hover .meet_summary {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 200px;
 }
 
 .meet_item .img {
