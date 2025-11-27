@@ -130,7 +130,6 @@ export default function Home() {
                     >
                       <div className="meet_gradient">
                         <div className="gradient_black"></div>
-                        <div className="gradient_blue"></div>
                       </div>
                       <div className="meet_details" style={{ marginTop: 'auto' }}>
                         <div className="text-2xl speaker-name">{card.title.toUpperCase()}</div>
@@ -238,7 +237,7 @@ export default function Home() {
               href="/events"
               className="card card--image p-10 md:p-12 group relative overflow-hidden"
               style={{
-                backgroundImage: "url(/images/home/events.webp)",
+                backgroundImage: "url(/images/home/events.jpeg)",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
