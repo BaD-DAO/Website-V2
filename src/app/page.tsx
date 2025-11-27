@@ -77,8 +77,7 @@ export default function Home() {
       </section>
 
       {/* What Is BuildaDAO Section */}
-      <section className="section_meet" style={{ borderBottom: 'none' }}>
-        <div className="padding-section-medium"></div>
+      <section className="section_meet" style={{ borderBottom: 'none', paddingTop: '2rem', paddingBottom: '2rem' }}>
         <div className="padding-global">
           <div className="container-large">
             <div className="header">
@@ -165,11 +164,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="padding-section-medium"></div>
       </section>
 
       {/* Programs Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-black border-t-0">
+      <section className="py-8 sm:py-10 md:py-12 lg:py-16 bg-black border-t-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center text-white mb-16 md:mb-20 px-4 leading-tight">Our Programs</h2>
           
@@ -270,7 +268,7 @@ export default function Home() {
       </section>
 
       {/* Countries Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-black">
+      <section className="py-8 sm:py-10 md:py-12 lg:py-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center text-white mb-8 md:mb-10 px-4 leading-tight">BuildaDAO Across Africa</h2>
           <p className="text-center text-white/80 mb-16 md:mb-20 text-lg sm:text-xl md:text-2xl px-4 leading-relaxed">
@@ -292,7 +290,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-black">
+      <section className="py-8 sm:py-10 md:py-12 lg:py-16 bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 md:mb-10 px-4 leading-tight">Ready to Build the Future?</h2>
           <p className="text-lg sm:text-xl md:text-2xl mb-12 md:mb-16 px-4 text-white/80 leading-relaxed">
