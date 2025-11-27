@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { useRef } from 'react';
-import LiquidEther from '@/components/LiquidEther';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import type { Swiper as SwiperType } from 'swiper';
 import { Mousewheel, Keyboard } from 'swiper/modules';
@@ -31,26 +30,16 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black">
       {/* Hero Section */}
-      <section className="min-h-screen bg-black text-white flex items-center justify-center pt-24 relative overflow-hidden">
-        <div style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, zIndex: 0 }}>
-          <LiquidEther
-            colors={['#2562FF', '#4A7AFF', '#6B8FFF']}
-            mouseForce={20}
-            cursorSize={100}
-            isViscous={false}
-            viscous={30}
-            iterationsViscous={32}
-            iterationsPoisson={32}
-            resolution={0.5}
-            isBounce={false}
-            autoDemo={true}
-            autoSpeed={0.5}
-            autoIntensity={2.2}
-            takeoverDuration={0.25}
-            autoResumeDelay={3000}
-            autoRampDuration={0.6}
-          />
-        </div>
+      <section 
+        className="min-h-screen bg-black text-white flex items-center justify-center pt-24 relative overflow-hidden"
+        style={{
+          backgroundImage: "url(/images/home/hero.jpeg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        {/* Dark overlay tint */}
+        <div className="absolute inset-0 bg-black/70 z-0" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
           <div className="text-center space-y-10 md:space-y-12">
             <div className="space-y-4 md:space-y-6">
