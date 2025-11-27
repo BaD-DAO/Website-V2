@@ -141,6 +141,10 @@ export default function Home() {
                         </div>
                       </div>
                     </a>
+                    {/* Extra dark tint specifically for Startup Support image */}
+                    {card.title === 'Startup Support' && (
+                      <div className="absolute inset-0 bg-black/60 z-[1]" />
+                    )}
                     <img 
                       src={card.image} 
                       loading="lazy" 
