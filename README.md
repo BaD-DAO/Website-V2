@@ -6,7 +6,7 @@ A professional multi-page website for BuildaDAO - Building the future of decentr
 
 ### Main Website Sections
 
-1. **Home** - Overview of BuildaDAO's mission and programs
+1. **Home** - Hero with `hero.jpeg` background, overview of BuildaDAO's mission and key programs (Education, Startup Support, Talent Network)
 2. **First 500** - Startup accelerator program tracking 500 innovative African startups
 3. **BaD Academy** - AI and Blockchain courses for junior and enterprise levels
 4. **Countries** - BuildaDAO chapters across Africa (Ethiopia, Ghana, Cameroon, Uganda, Botswana, and more)
@@ -32,16 +32,28 @@ Open [http://localhost:3000](http://localhost:3000) to view the website.
 ```
 src/
 ├── app/
-│   ├── page.tsx              # Homepage
+│   ├── page.tsx              # Homepage with hero, What Is BuildaDAO, programs
 │   ├── layout.tsx            # Root layout with navigation & footer
-│   ├── academy/page.tsx      # BaD Academy courses
-│   ├── first-500/page.tsx    # First 500 startups program
-│   ├── countries/page.tsx    # Country chapters
-│   ├── events/page.tsx       # Events & ambassadors
-│   └── talent-pool/page.tsx  # Talent network
+│   ├── globals.css           # Global styles and custom CSS
+│   ├── favicon.ico           # Site favicon
+│   ├── academy/
+│   │   └── page.tsx          # BaD Academy courses
+│   ├── first-500/
+│   │   └── page.tsx          # First 500 startups program
+│   ├── countries/
+│   │   └── page.tsx          # Country chapters
+│   ├── events/
+│   │   └── page.tsx          # Events & ambassadors
+│   ├── talent-pool/
+│   │   └── page.tsx          # Talent network
+│   └── contact/
+│       └── page.tsx          # Contact page
 └── components/
     ├── Navigation.tsx        # Main navigation bar
-    └── Footer.tsx            # Site footer
+    ├── Footer.tsx            # Site footer
+    ├── LiquidEther.tsx       # Interactive liquid background effect
+    ├── LiquidEther.css       # Liquid ether styles
+    └── SpeakersSection.tsx   # Team members carousel section
 ```
 
 ## 🎨 Tech Stack
@@ -80,6 +92,10 @@ Network of 1,250+ professionals across:
 ## 🛠️ Customization
 
 To customize content, edit the respective page files in `src/app/`. All pages use Tailwind CSS for styling.
+
+- **Hero background**: Update `public/images/home/hero.jpeg` or change the `backgroundImage` style in `src/app/page.tsx`.
+- **Home carousel cards** (Education, Startup Support, Talent Network): Update the `cards` array and images in `public/images/home/` (e.g. `education.jpg`, `startup-support.jpg`, `talent-pool.jpg`).
+- **Programs section images**: Backgrounds for First 500, Academy, Talent Pool, and Events cards are set via inline `backgroundImage` styles in `page.tsx` (including `events.jpeg` for the Events card).
 
 ## 📦 Build for Production
 
