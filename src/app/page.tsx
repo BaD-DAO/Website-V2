@@ -121,13 +121,30 @@ export default function Home() {
                     className="meet_item swiper-slide w-dyn-item"
                     data-w-id="ad3c1389-fdb5-f287-14c4-c8debac25f07"
                     role="listitem"
+                    style={{ position: 'relative', height: '500px', minHeight: '500px' }}
                   >
-                    <a href="#" className="meet_content w-inline-block">
+                    <a 
+                      href="#" 
+                      className="meet_content w-inline-block"
+                      style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'flex-end',
+                        alignItems: 'flex-start',
+                        padding: '2rem',
+                        zIndex: 10
+                      }}
+                    >
                       <div className="meet_gradient">
                         <div className="gradient_black"></div>
                         <div className="gradient_blue"></div>
                       </div>
-                      <div className="meet_details">
+                      <div className="meet_details" style={{ marginTop: 'auto' }}>
                         <div className="text-2xl speaker-name">{card.title.toUpperCase()}</div>
                         <div className="meet_summary">
                           <div className="text-color-secondary text-style-2lines">
@@ -159,7 +176,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
             <Link
               href="/first-500"
-              className="card p-10 md:p-12 group relative overflow-hidden"
+              className="card card--image p-10 md:p-12 group relative overflow-hidden"
               style={{
                 backgroundImage: "url(/images/home/first-500.jpg)",
                 backgroundSize: "cover",
@@ -182,7 +199,7 @@ export default function Home() {
             
             <Link
               href="/academy"
-              className="card p-10 md:p-12 group relative overflow-hidden"
+              className="card card--image p-10 md:p-12 group relative overflow-hidden"
               style={{
                 backgroundImage: "url(/images/home/bad-academy.jpg)",
                 backgroundSize: "cover",
@@ -205,7 +222,7 @@ export default function Home() {
             
             <Link
               href="/talent-pool"
-              className="card p-10 md:p-12 group relative overflow-hidden"
+              className="card card--image p-10 md:p-12 group relative overflow-hidden"
               style={{
                 backgroundImage: "url(/images/home/talent-pool.jpg)",
                 backgroundSize: "cover",
@@ -228,7 +245,7 @@ export default function Home() {
             
             <Link
               href="/events"
-              className="card p-10 md:p-12 group relative overflow-hidden"
+              className="card card--image p-10 md:p-12 group relative overflow-hidden"
               style={{
                 backgroundImage: "url(/images/home/events.webp)",
                 backgroundSize: "cover",
