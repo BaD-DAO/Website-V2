@@ -34,7 +34,7 @@ export default function TalentPool() {
         </div>
       </section>
 
-      <section className="py-20 bg-black">
+      <section className="py-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center p-8 card-elevated">
@@ -69,7 +69,7 @@ export default function TalentPool() {
         </div>
       </section>
 
-      <section className="py-20 bg-black">
+      <section className="py-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {filteredTalents.map((talent) => (
@@ -105,7 +105,7 @@ export default function TalentPool() {
         </div>
       </section>
 
-      <section className="py-20 bg-black">
+      <section className="py-16 bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-5xl font-bold mb-6">Hiring? Find Your Perfect Match</h2>
           <p className="text-xl mb-10">Access vetted professionals across cybersecurity, development, design, marketing, and more</p>

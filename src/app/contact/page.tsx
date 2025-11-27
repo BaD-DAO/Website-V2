@@ -38,7 +38,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-black">
+      <section className="py-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Contact Form */}
@@ -176,7 +176,7 @@ export default function Contact() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-black">
+      <section className="py-16 bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-5xl font-bold text-center mb-16">Frequently Asked Questions</h2>
           <div className="space-y-6">

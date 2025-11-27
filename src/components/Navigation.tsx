@@ -19,22 +19,22 @@ export default function Navigation() {
           
           {/* Desktop Navigation - Center */}
           <div className="hidden lg:flex items-center space-x-6 absolute left-1/2 -translate-x-1/2">
-            <Link href="/" className="text-white hover:underline transition-all duration-300 text-sm font-medium">
+            <Link href="/" className="text-white hover:underline transition-all duration-300 text-base md:text-lg font-medium">
               Home
             </Link>
-            <Link href="/first-500" className="text-white hover:underline transition-all duration-300 text-sm font-medium">
+            <Link href="/first-500" className="text-white hover:underline transition-all duration-300 text-base md:text-lg font-medium">
               First 500
             </Link>
-            <Link href="/academy" className="text-white hover:underline transition-all duration-300 text-sm font-medium">
+            <Link href="/academy" className="text-white hover:underline transition-all duration-300 text-base md:text-lg font-medium">
               Academy
             </Link>
-            <Link href="/countries" className="text-white hover:underline transition-all duration-300 text-sm font-medium">
+            <Link href="/countries" className="text-white hover:underline transition-all duration-300 text-base md:text-lg font-medium">
               Countries
             </Link>
-            <Link href="/events" className="text-white hover:underline transition-all duration-300 text-sm font-medium">
+            <Link href="/events" className="text-white hover:underline transition-all duration-300 text-base md:text-lg font-medium">
               Events
             </Link>
-            <Link href="/talent-pool" className="text-white hover:underline transition-all duration-300 text-sm font-medium">
+            <Link href="/talent-pool" className="text-white hover:underline transition-all duration-300 text-base md:text-lg font-medium">
               Talent Pool
             </Link>
           </div>
@@ -45,7 +45,7 @@ export default function Navigation() {
               {/* Contact Us */}
               <Link 
                 href="/contact" 
-                className="px-5 py-2 bg-white text-black hover:bg-white/90 transition-all duration-200 text-sm font-medium rounded-md shadow-sm"
+                className="px-5 py-2 bg-white text-black hover:bg-white/90 transition-all duration-200 text-base md:text-lg font-medium rounded-md shadow-sm"
               >
                 Contact Us
               </Link>
@@ -73,26 +73,26 @@ export default function Navigation() {
         {isOpen && (
           <div className="lg:hidden border-t border-white/10 mt-2">
             <div className="px-4 pt-2 pb-4 space-y-1">
-              <Link href="/" className="block px-3 py-2 text-white hover:bg-white/5 text-sm font-medium transition-colors rounded-md">
+              <Link href="/" className="block px-3 py-2 text-white hover:bg-white/5 text-base font-medium transition-colors rounded-md">
                 Home
               </Link>
-              <Link href="/first-500" className="block px-3 py-2 text-white hover:bg-white/5 text-sm font-medium transition-colors rounded-md">
+              <Link href="/first-500" className="block px-3 py-2 text-white hover:bg-white/5 text-base font-medium transition-colors rounded-md">
                 First 500
               </Link>
-              <Link href="/academy" className="block px-3 py-2 text-white hover:bg-white/5 text-sm font-medium transition-colors rounded-md">
+              <Link href="/academy" className="block px-3 py-2 text-white hover:bg-white/5 text-base font-medium transition-colors rounded-md">
                 Academy
               </Link>
-              <Link href="/countries" className="block px-3 py-2 text-white hover:bg-white/5 text-sm font-medium transition-colors rounded-md">
+              <Link href="/countries" className="block px-3 py-2 text-white hover:bg-white/5 text-base font-medium transition-colors rounded-md">
                 Countries
               </Link>
-              <Link href="/events" className="block px-3 py-2 text-white hover:bg-white/5 text-sm font-medium transition-colors rounded-md">
+              <Link href="/events" className="block px-3 py-2 text-white hover:bg-white/5 text-base font-medium transition-colors rounded-md">
                 Events
               </Link>
-              <Link href="/talent-pool" className="block px-3 py-2 text-white hover:bg-white/5 text-sm font-medium transition-colors rounded-md">
+              <Link href="/talent-pool" className="block px-3 py-2 text-white hover:bg-white/5 text-base font-medium transition-colors rounded-md">
                 Talent Pool
               </Link>
               <div className="pt-4">
-                <Link href="/contact" className="block px-3 py-2 text-center bg-white text-black text-sm font-medium hover:bg-white/90 transition-colors rounded-md">
+                <Link href="/contact" className="block px-3 py-2 text-center bg-white text-black text-base font-medium hover:bg-white/90 transition-colors rounded-md">
                   Contact Us
                 </Link>
               </div>

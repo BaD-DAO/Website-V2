@@ -31,7 +31,7 @@ export default function Events() {
       </section>
 
       {activeTab === 'upcoming' && (
-        <section className="py-20 bg-black">
+        <section className="py-16 bg-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-5xl font-bold text-white mb-16 text-center">Upcoming Events</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -57,7 +57,7 @@ export default function Events() {
       )}
 
       {activeTab === 'organizing' && (
-        <section className="py-20 bg-black">
+        <section className="py-16 bg-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <h2 className="text-5xl font-bold text-white mb-6">Event Organizing as a Service</h2>
@@ -90,7 +90,7 @@ export default function Events() {
       )}
 
       {activeTab === 'ambassadors' && (
-        <section className="py-20 bg-black">
+        <section className="py-16 bg-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <h2 className="text-5xl font-bold text-white mb-6">Event Ambassadors Program</h2>
@@ -114,7 +114,7 @@ export default function Events() {
         </section>
       )}
 
-      <section className="py-20 bg-black">
+      <section className="py-16 bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-5xl font-bold mb-6">Get Involved</h2>
           <p className="text-xl mb-10">Whether you want to attend, organize, or lead - there's a place for you</p>

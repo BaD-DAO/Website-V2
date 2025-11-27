@@ -73,7 +73,7 @@ export default function Countries() {
       </section>
 
       {/* Stats Overview */}
-      <section className="py-20 bg-black">
+      <section className="py-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="text-center p-8 card-elevated">
@@ -97,7 +97,7 @@ export default function Countries() {
       </section>
 
       {/* Countries Grid */}
-      <section className="py-20 bg-black">
+      <section className="py-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-5xl font-bold text-white mb-16 text-center">Our Communities</h2>
           
@@ -137,7 +137,7 @@ export default function Countries() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-black">
+      <section className="py-16 bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-5xl font-bold mb-6">Start a Chapter in Your Country</h2>
           <p className="text-xl mb-10">
