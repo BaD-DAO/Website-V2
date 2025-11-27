@@ -10,7 +10,7 @@ export default function First500() {
   return (
     <div className="min-h-screen bg-black">
       {/* Hero Section */}
-      <section className="min-h-screen bg-black text-white flex items-center justify-center border-b border-white/10 pt-24">
+      <section className="min-h-screen bg-black text-white flex items-center justify-center pt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center space-y-8">
             <h1 className="text-6xl md:text-8xl font-bold">First 500 Startups</h1>
@@ -22,7 +22,7 @@ export default function First500() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-black border-b border-white/10">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="text-center p-8 card-elevated">
@@ -46,7 +46,7 @@ export default function First500() {
       </section>
 
       {/* Program Details */}
-      <section className="py-20 bg-black border-b border-white/10">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-5xl font-bold text-white mb-16 text-center">What We Offer</h2>
           

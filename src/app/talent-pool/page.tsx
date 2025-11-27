@@ -25,7 +25,7 @@ export default function TalentPool() {
 
   return (
     <div className="min-h-screen bg-black">
-      <section className="min-h-screen bg-black text-white flex items-center justify-center border-b border-white/10 pt-24">
+      <section className="min-h-screen bg-black text-white flex items-center justify-center pt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center space-y-8">
             <h1 className="text-6xl md:text-8xl font-bold">DAO Talent Pool</h1>
@@ -34,7 +34,7 @@ export default function TalentPool() {
         </div>
       </section>
 
-      <section className="py-20 bg-black border-b border-white/10">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center p-8 card-elevated">
@@ -57,7 +57,7 @@ export default function TalentPool() {
         </div>
       </section>
 
-      <section className="py-8 bg-black border-b border-white/10">
+      <section className="py-8 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-4 justify-center">
             {categories.map((category) => (
@@ -69,7 +69,7 @@ export default function TalentPool() {
         </div>
       </section>
 
-      <section className="py-20 bg-black border-b border-white/10">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {filteredTalents.map((talent) => (

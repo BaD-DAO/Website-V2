@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black">
       {/* Hero Section */}
-      <section className="min-h-screen bg-black text-white flex items-center justify-center border-b border-white/10 pt-24 relative overflow-hidden">
+      <section className="min-h-screen bg-black text-white flex items-center justify-center pt-24 relative overflow-hidden">
         <div style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, zIndex: 0 }}>
           <LiquidEther
             colors={['#2562FF', '#4A7AFF', '#6B8FFF']}
@@ -77,7 +77,7 @@ export default function Home() {
       </section>
 
       {/* What Is BuildaDAO Section */}
-      <section className="section_meet">
+      <section className="section_meet" style={{ borderBottom: 'none' }}>
         <div className="padding-section-medium"></div>
         <div className="padding-global">
           <div className="container-large">
@@ -169,7 +169,7 @@ export default function Home() {
       </section>
 
       {/* Programs Section */}
-      <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-black border-b border-white/10">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-black border-t-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center text-white mb-16 md:mb-20 px-4 leading-tight">Our Programs</h2>
           
@@ -270,7 +270,7 @@ export default function Home() {
       </section>
 
       {/* Countries Section */}
-      <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-black border-b border-white/10">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center text-white mb-8 md:mb-10 px-4 leading-tight">BuildaDAO Across Africa</h2>
           <p className="text-center text-white/80 mb-16 md:mb-20 text-lg sm:text-xl md:text-2xl px-4 leading-relaxed">

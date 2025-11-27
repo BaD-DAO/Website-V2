@@ -61,7 +61,7 @@ export default function Countries() {
   return (
     <div className="min-h-screen bg-black">
       {/* Hero Section */}
-      <section className="min-h-screen bg-black text-white flex items-center justify-center border-b border-white/10 pt-24">
+      <section className="min-h-screen bg-black text-white flex items-center justify-center pt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center space-y-8">
             <h1 className="text-6xl md:text-8xl font-bold">BuildaDAO Across Africa</h1>
@@ -73,7 +73,7 @@ export default function Countries() {
       </section>
 
       {/* Stats Overview */}
-      <section className="py-20 bg-black border-b border-white/10">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="text-center p-8 card-elevated">
@@ -97,14 +97,14 @@ export default function Countries() {
       </section>
 
       {/* Countries Grid */}
-      <section className="py-20 bg-black border-b border-white/10">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-5xl font-bold text-white mb-16 text-center">Our Communities</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {countries.map((country) => (
               <div key={country.name} className="card overflow-hidden">
-                <div className="border-b border-white/10 p-8 text-center">
+                <div className="p-8 text-center">
                   <h3 className="text-3xl font-semibold">BaD {country.name}</h3>
                 </div>
                 
@@ -112,15 +112,15 @@ export default function Countries() {
                   <p className="mb-6 text-sm text-white/70">{country.description}</p>
                   
                   <div className="space-y-3 text-sm mb-6">
-                    <div className="flex justify-between border-b border-white/10 pb-2">
+                    <div className="flex justify-between pb-2">
                       <span className="text-white/70">Members:</span>
                       <span className="font-semibold">{country.members}</span>
                     </div>
-                    <div className="flex justify-between border-b border-white/10 pb-2">
+                    <div className="flex justify-between pb-2">
                       <span className="text-white/70">Startups:</span>
                       <span className="font-semibold">{country.startups}</span>
                     </div>
-                    <div className="flex justify-between border-b border-white/10 pb-2">
+                    <div className="flex justify-between pb-2">
                       <span className="text-white/70">Events:</span>
                       <span className="font-semibold">{country.events}</span>
                     </div>

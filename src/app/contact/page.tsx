@@ -26,7 +26,7 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-black">
       {/* Hero Section */}
-      <section className="min-h-screen bg-black text-white flex items-center justify-center border-b border-white/10 pt-24">
+      <section className="min-h-screen bg-black text-white flex items-center justify-center pt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center space-y-8">
             <h1 className="text-6xl md:text-8xl font-bold">Contact Us</h1>
@@ -38,7 +38,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-black border-b border-white/10">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Contact Form */}
