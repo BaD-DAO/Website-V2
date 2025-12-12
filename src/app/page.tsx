@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import type { Swiper as SwiperType } from 'swiper';
 import { Mousewheel, Keyboard } from 'swiper/modules';
 import 'swiper/css';
+import AfricaMap from '@/components/AfricaMap';
 
 const cards = [
   {
@@ -275,16 +276,8 @@ export default function Home() {
             Growing communities in multiple countries across the continent
           </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8">
-            {['Ethiopia', 'Ghana', 'Cameroon', 'Uganda', 'Botswana'].map((country) => (
-              <Link
-                key={country}
-                href="/countries"
-                className="card p-8 md:p-10 text-center font-semibold text-lg md:text-xl group"
-              >
-                <span className="group-hover:text-white transition-colors text-white/90">BaD {country}</span>
-              </Link>
-            ))}
+          <div className="w-full flex justify-center">
+            <AfricaMap />
           </div>
         </div>
       </section>
