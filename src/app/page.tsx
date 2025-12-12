@@ -4,8 +4,9 @@ import Link from 'next/link';
 import { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import type { Swiper as SwiperType } from 'swiper';
-import { Mousewheel, Keyboard } from 'swiper/modules';
+import { Mousewheel, Keyboard, Autoplay } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/bundle';
 
 const cards = [
   {
@@ -80,9 +81,6 @@ export default function Home() {
             <div className="gap-section-medium"></div>
             <div className="meet_wrap slide_down">
               <Swiper
-                onSwiper={(swiper) => {
-                  swiperRef.current = swiper;
-                }}
                 modules={[Mousewheel, Keyboard]}
                 speed={700}
                 loop={false}
@@ -268,24 +266,77 @@ export default function Home() {
       </section>
 
       {/* Countries Section */}
-      <section className="py-8 sm:py-10 md:py-12 lg:py-16 bg-black">
+      <section className="py-8 sm:py-10 md:py-12 lg:py-16 bg-black overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center text-white mb-8 md:mb-10 px-4 leading-tight">BuildaDAO Across Africa</h2>
           <p className="text-center text-white/80 mb-16 md:mb-20 text-lg sm:text-xl md:text-2xl px-4 leading-relaxed">
             Growing communities in multiple countries across the continent
           </p>
+        </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8">
-            {['Ethiopia', 'Ghana', 'Cameroon', 'Uganda', 'Botswana'].map((country) => (
-              <Link
-                key={country}
-                href="/countries"
-                className="card p-8 md:p-10 text-center font-semibold text-lg md:text-xl group"
-              >
-                <span className="group-hover:text-white transition-colors text-white/90">BaD {country}</span>
-              </Link>
+        <div className="w-full mb-12 md:mb-16">
+          <Swiper
+            modules={[Autoplay]}
+            spaceBetween={24}
+            slidesPerView={2}
+            loop={true}
+            speed={8000}
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            breakpoints={{
+              640: {
+                slidesPerView: 3,
+              },
+              768: {
+                slidesPerView: 4,
+              },
+              1024: {
+                slidesPerView: 5,
+              },
+            }}
+            className="countries-swiper"
+          >
+            {[
+              { name: 'Ethiopia', image: '/images/home/countries/Ethiopia.png' },
+              { name: 'Ghana', image: '/images/home/countries/Ghana.png' },
+              { name: 'Cameroon', image: '/images/home/countries/Cameroon.png' },
+              { name: 'Uganda', image: '/images/home/countries/Uganda.png' },
+              { name: 'Botswana', image: '/images/home/countries/Botswana.png' },
+              { name: 'Kenya', image: '/images/home/countries/Kenya.png' }
+            ].map((country) => (
+              <SwiperSlide key={country.name} className="py-2">
+                <Link
+                  href="/countries"
+                  className="block h-64 w-full relative group overflow-hidden rounded-2xl bg-gray-900 shadow-lg border border-white/10"
+                >
+                  <img
+                    src={country.image}
+                    alt={`BaD ${country.name}`}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-100"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent group-hover:via-black/60 transition-colors" />
+                  <div className="absolute inset-0 flex items-end justify-center p-6">
+                    <h3 className="text-xl font-bold text-white text-center tracking-wide uppercase">
+                      BaD {country.name}
+                    </h3>
+                  </div>
+                </Link>
+              </SwiperSlide>
             ))}
-          </div>
+          </Swiper>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <Link
+            href="/countries"
+            className="button-primary inline-flex items-center gap-2"
+          >
+            View on Map
+            <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+          </Link>
         </div>
       </section>
 

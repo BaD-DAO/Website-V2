@@ -480,3 +480,19 @@ body {
     height: 450px;
   }
 }
+
+/* Countries Swiper - Continuous Scroll */
+.countries-swiper {
+  width: 100%;
+  height: auto;
+}
+
+.countries-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+  -webkit-transition-timing-function: linear !important;
+}
+
+.countries-swiper .swiper-slide {
+  width: auto;
+  height: auto;
+}
