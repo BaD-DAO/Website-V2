@@ -1,3 +1,5 @@
+import AfricaMap from '@/components/AfricaMap';
+
 export default function Countries() {
   const countries = [
     {
@@ -61,13 +63,17 @@ export default function Countries() {
   return (
     <div className="min-h-screen bg-black">
       {/* Hero Section */}
-      <section className="min-h-screen bg-black text-white flex items-center justify-center pt-24">
+      <section className="min-h-screen bg-black text-white flex flex-col items-center justify-center pt-24 pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="text-center space-y-8">
+          <div className="text-center space-y-8 mb-12">
             <h1 className="text-6xl md:text-8xl font-bold">BuildaDAO Across Africa</h1>
             <p className="text-xl md:text-2xl max-w-4xl mx-auto">
               Building vibrant tech communities in every corner of the continent
             </p>
+          </div>
+
+          <div className="w-full flex justify-center">
+            <AfricaMap />
           </div>
         </div>
       </section>
@@ -100,17 +106,17 @@ export default function Countries() {
       <section className="py-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-5xl font-bold text-white mb-16 text-center">Our Communities</h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {countries.map((country) => (
               <div key={country.name} className="card overflow-hidden">
                 <div className="p-8 text-center">
                   <h3 className="text-3xl font-semibold">BaD {country.name}</h3>
                 </div>
-                
+
                 <div className="p-6">
                   <p className="mb-6 text-sm text-white/70">{country.description}</p>
-                  
+
                   <div className="space-y-3 text-sm mb-6">
                     <div className="flex justify-between pb-2">
                       <span className="text-white/70">Members:</span>
@@ -125,7 +131,7 @@ export default function Countries() {
                       <span className="font-semibold">{country.events}</span>
                     </div>
                   </div>
-                  
+
                   <button className="w-full button-primary py-2">
                     Join Community
                   </button>
