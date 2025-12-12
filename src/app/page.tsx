@@ -176,14 +176,16 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-black/30 group-hover:from-black/95 transition-colors" />
               <div className="relative z-10">
                 <h3 className="text-3xl md:text-4xl font-bold mb-6 text-white">First 500 Startups</h3>
-                <p className="mb-8 text-lg md:text-xl text-white/80 leading-relaxed">
-                  Supporting the first 500 innovative startups with mentorship, resources, and community.
-                  Track progress and milestones of each participating startup.
-                </p>
-                <span className="font-semibold text-lg md:text-xl text-white/90 group-hover:text-white transition-colors inline-flex items-center gap-2">
-                  Learn More
-                  <span className="group-hover:translate-x-1 transition-transform">→</span>
-                </span>
+                <div className="max-h-0 opacity-0 group-hover:max-h-64 group-hover:opacity-100 transition-all duration-500 ease-in-out overflow-hidden">
+                  <p className="mb-8 text-lg md:text-xl text-white/80 leading-relaxed">
+                    Supporting the first 500 innovative startups with mentorship, resources, and community.
+                    Track progress and milestones of each participating startup.
+                  </p>
+                  <span className="font-semibold text-lg md:text-xl text-white/90 group-hover:text-white transition-colors inline-flex items-center gap-2">
+                    Learn More
+                    <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  </span>
+                </div>
               </div>
             </Link>
 
@@ -199,14 +201,16 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-black/30 group-hover:from-black/95 transition-colors" />
               <div className="relative z-10">
                 <h3 className="text-3xl md:text-4xl font-bold mb-6 text-white">BaD Academy</h3>
-                <p className="mb-8 text-lg md:text-xl text-white/80 leading-relaxed">
-                  Comprehensive AI and blockchain courses for junior developers and enterprise teams.
-                  Industry-leading curriculum designed for African innovators.
-                </p>
-                <span className="font-semibold text-lg md:text-xl text-white/90 group-hover:text-white transition-colors inline-flex items-center gap-2">
-                  Explore Courses
-                  <span className="group-hover:translate-x-1 transition-transform">→</span>
-                </span>
+                <div className="max-h-0 opacity-0 group-hover:max-h-64 group-hover:opacity-100 transition-all duration-500 ease-in-out overflow-hidden">
+                  <p className="mb-8 text-lg md:text-xl text-white/80 leading-relaxed">
+                    Comprehensive AI and blockchain courses for junior developers and enterprise teams.
+                    Industry-leading curriculum designed for African innovators.
+                  </p>
+                  <span className="font-semibold text-lg md:text-xl text-white/90 group-hover:text-white transition-colors inline-flex items-center gap-2">
+                    Explore Courses
+                    <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  </span>
+                </div>
               </div>
             </Link>
 
@@ -222,14 +226,16 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-black/30 group-hover:from-black/95 transition-colors" />
               <div className="relative z-10">
                 <h3 className="text-3xl md:text-4xl font-bold mb-6 text-white">Talent Pool</h3>
-                <p className="mb-8 text-lg md:text-xl text-white/80 leading-relaxed">
-                  Access our network of cybersecurity experts, designers, developers, marketers,
-                  and more. Find the perfect talent for your project.
-                </p>
-                <span className="font-semibold text-lg md:text-xl text-white/90 group-hover:text-white transition-colors inline-flex items-center gap-2">
-                  Browse Talent
-                  <span className="group-hover:translate-x-1 transition-transform">→</span>
-                </span>
+                <div className="max-h-0 opacity-0 group-hover:max-h-64 group-hover:opacity-100 transition-all duration-500 ease-in-out overflow-hidden">
+                  <p className="mb-8 text-lg md:text-xl text-white/80 leading-relaxed">
+                    Access our network of cybersecurity experts, designers, developers, marketers,
+                    and more. Find the perfect talent for your project.
+                  </p>
+                  <span className="font-semibold text-lg md:text-xl text-white/90 group-hover:text-white transition-colors inline-flex items-center gap-2">
+                    Browse Talent
+                    <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  </span>
+                </div>
               </div>
             </Link>
 
@@ -245,14 +251,16 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-black/30 group-hover:from-black/95 transition-colors" />
               <div className="relative z-10">
                 <h3 className="text-3xl md:text-4xl font-bold mb-6 text-white">Events & Community</h3>
-                <p className="mb-8 text-lg md:text-xl text-white/80 leading-relaxed">
-                  Join upcoming events, become an event ambassador, or leverage our event organizing services
-                  for your community initiatives.
-                </p>
-                <span className="font-semibold text-lg md:text-xl text-white/90 group-hover:text-white transition-colors inline-flex items-center gap-2">
-                  View Events
-                  <span className="group-hover:translate-x-1 transition-transform">→</span>
-                </span>
+                <div className="max-h-0 opacity-0 group-hover:max-h-64 group-hover:opacity-100 transition-all duration-500 ease-in-out overflow-hidden">
+                  <p className="mb-8 text-lg md:text-xl text-white/80 leading-relaxed">
+                    Join upcoming events, become an event ambassador, or leverage our event organizing services
+                    for your community initiatives.
+                  </p>
+                  <span className="font-semibold text-lg md:text-xl text-white/90 group-hover:text-white transition-colors inline-flex items-center gap-2">
+                    View Events
+                    <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  </span>
+                </div>
               </div>
             </Link>
           </div>
