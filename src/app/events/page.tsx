@@ -11,7 +11,7 @@ export default function Events() {
 
   return (
     <div className="min-h-screen bg-black">
-      <section className="min-h-screen bg-black text-white flex items-center justify-center pt-24">
+      <section className="min-h-screen bg-black text-white flex items-center justify-center border-b border-white/10 pt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center space-y-8">
             <h1 className="text-6xl md:text-8xl font-bold">Events & Community</h1>
@@ -20,7 +20,7 @@ export default function Events() {
         </div>
       </section>
 
-      <section className="py-8 bg-black">
+      <section className="py-8 bg-black border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex gap-4 justify-center flex-wrap">
             <button onClick={() => setActiveTab('upcoming')} className={`px-8 py-4 font-medium transition-all duration-200 text-lg rounded-md ${activeTab === 'upcoming' ? 'button-primary' : 'button-secondary'}`}>Upcoming Events</button>
@@ -31,13 +31,13 @@ export default function Events() {
       </section>
 
       {activeTab === 'upcoming' && (
-        <section className="py-16 bg-black">
+        <section className="py-20 bg-black border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-5xl font-bold text-white mb-16 text-center">Upcoming Events</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {upcomingEvents.map((event) => (
                 <div key={event.id} className="card overflow-hidden group">
-                  <div className="p-6">
+                  <div className="border-b border-white/10 p-6">
                     <span className="badge">{event.type}</span>
                   </div>
                   <div className="p-8">
@@ -57,7 +57,7 @@ export default function Events() {
       )}
 
       {activeTab === 'organizing' && (
-        <section className="py-16 bg-black">
+        <section className="py-20 bg-black border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <h2 className="text-5xl font-bold text-white mb-6">Event Organizing as a Service</h2>
@@ -90,7 +90,7 @@ export default function Events() {
       )}
 
       {activeTab === 'ambassadors' && (
-        <section className="py-16 bg-black">
+        <section className="py-20 bg-black border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <h2 className="text-5xl font-bold text-white mb-6">Event Ambassadors Program</h2>
@@ -114,7 +114,7 @@ export default function Events() {
         </section>
       )}
 
-      <section className="py-16 bg-black">
+      <section className="py-20 bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-5xl font-bold mb-6">Get Involved</h2>
           <p className="text-xl mb-10">Whether you want to attend, organize, or lead - there's a place for you</p>

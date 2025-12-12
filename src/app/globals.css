@@ -371,10 +371,6 @@ body {
   line-height: 1.75;
   margin-top: 0.25rem;
   font-weight: 400;
-  opacity: 1;
-  transform: translateY(0);
-  max-height: none;
-  overflow: visible;
   font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
 }
 
