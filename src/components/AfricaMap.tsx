@@ -30,8 +30,8 @@ export default function AfricaMap() {
             <ComposableMap
                 projection="geoMercator"
                 projectionConfig={{
-                    scale: 400,
-                    center: [20, 0] // Centered on Africa roughly
+                    scale: 350,
+                    center: [20, 5] // Adjusted center to show more of northern Africa
                 }}
                 style={{ width: "100%", height: "100%" }}
             >
