@@ -1,4 +1,5 @@
 import AfricaCarousel from '@/components/AfricaCarousel';
+import AfricaMap from '@/components/AfricaMap';
 
 export default function Countries() {
   return (
@@ -14,6 +15,10 @@ export default function Countries() {
           </div>
 
           <AfricaCarousel />
+          
+          <div className="w-full flex justify-center mt-16">
+            <AfricaMap />
+          </div>
         </div>
       </section>
 

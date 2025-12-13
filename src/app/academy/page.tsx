@@ -47,30 +47,27 @@ export default function Academy() {
       {/* Hero Section */}
       <section className="min-h-screen bg-black text-white flex items-center justify-center pt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="text-center space-y-8">
-            <h1 className="text-6xl md:text-8xl font-bold">BaD Academy</h1>
-            <p className="text-xl md:text-2xl max-w-4xl mx-auto">
-              World-class AI and blockchain education designed for African innovators
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Overview */}
-      <section className="py-16 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center p-8 card-elevated">
-              <div className="text-6xl font-bold mb-2">50+</div>
-              <div className="text-lg text-white/70">Expert Instructors</div>
+          <div className="text-center space-y-12">
+            <div className="space-y-6">
+              <h1 className="text-6xl md:text-8xl font-bold">BaD Academy</h1>
+              <p className="text-xl md:text-2xl max-w-4xl mx-auto">
+                World-class AI and blockchain education designed for African innovators
+              </p>
             </div>
-            <div className="text-center p-8 card-elevated">
-              <div className="text-6xl font-bold mb-2">2,500+</div>
-              <div className="text-lg text-white/70">Students Trained</div>
-            </div>
-            <div className="text-center p-8 card-elevated">
-              <div className="text-6xl font-bold mb-2">95%</div>
-              <div className="text-lg text-white/70">Job Placement Rate</div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="text-5xl md:text-6xl font-bold mb-2">50+</div>
+                <div className="text-lg text-white/70">Expert Instructors</div>
+              </div>
+              <div className="text-center">
+                <div className="text-5xl md:text-6xl font-bold mb-2">2,500+</div>
+                <div className="text-lg text-white/70">Students Trained</div>
+              </div>
+              <div className="text-center">
+                <div className="text-5xl md:text-6xl font-bold mb-2">95%</div>
+                <div className="text-lg text-white/70">Job Placement Rate</div>
+              </div>
             </div>
           </div>
         </div>
