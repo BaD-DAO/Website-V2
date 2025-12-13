@@ -6,19 +6,22 @@ export default function Countries() {
     <div className="min-h-screen bg-black">
       {/* Hero Section */}
       <section className="min-h-screen bg-black text-white flex flex-col items-center justify-center pt-24 pb-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="text-center space-y-8 mb-16">
-            <h1 className="text-6xl md:text-8xl font-bold">BuildaDAO Across Africa</h1>
-            <p className="text-xl md:text-2xl max-w-4xl mx-auto">
-              Growing communities in multiple countries across the continent
-            </p>
-          </div>
+        <div className="text-center space-y-8 mb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-6xl md:text-8xl font-bold">BuildaDAO Across Africa</h1>
+          <p className="text-xl md:text-2xl max-w-4xl mx-auto">
+            Growing communities in multiple countries across the continent
+          </p>
+        </div>
 
+        <div className="w-full">
+          <AfricaMap />
+        </div>
+      </section>
+
+      {/* Carousel Section */}
+      <section className="py-16 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AfricaCarousel />
-          
-          <div className="w-full flex justify-center mt-16">
-            <AfricaMap />
-          </div>
         </div>
       </section>
 
